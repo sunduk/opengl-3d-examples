@@ -1,2 +1,0 @@
-CMake ../cmake
-pause

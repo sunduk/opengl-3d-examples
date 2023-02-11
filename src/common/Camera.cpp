@@ -2,8 +2,6 @@
 
 #include "Camera.h"
 
-#include <iostream>
-
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
 #include "glm/gtc/matrix_transform.hpp"
@@ -94,7 +92,6 @@ void Camera::ResetMovement()
 void Camera::AddYaw(float xoffset)
 {
     mYaw += xoffset;
-    std::cout << mYaw << std::endl;
 }
 
 void Camera::AddPitch(float yoffset)

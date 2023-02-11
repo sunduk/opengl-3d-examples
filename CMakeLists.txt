@@ -173,11 +173,11 @@ add_executable (ExampleMain
 )
 
 target_link_libraries(ExampleMain
-  debug ${CMAKE_CURRENT_SOURCE_DIR}/externals/glfw/build/generated/src/debug/glfw3.lib
-  optimized ${CMAKE_CURRENT_SOURCE_DIR}/externals/glfw/build/generated/src/release/glfw3.lib
+  debug ${CMAKE_CURRENT_SOURCE_DIR}/externals/glfw/generated/src/debug/glfw3.lib
+  optimized ${CMAKE_CURRENT_SOURCE_DIR}/externals/glfw/generated/src/release/glfw3.lib
 
-  debug ${CMAKE_CURRENT_SOURCE_DIR}/externals/glew-2.1.0/build/generated/lib/debug/libglew32d.lib
-  optimized ${CMAKE_CURRENT_SOURCE_DIR}/externals/glew-2.1.0/build/generated/lib/release/libglew32.lib
+  debug ${CMAKE_CURRENT_SOURCE_DIR}/externals/glew-2.1.0/generated/lib/debug/libglew32d.lib
+  optimized ${CMAKE_CURRENT_SOURCE_DIR}/externals/glew-2.1.0/generated/lib/release/libglew32.lib
 
   opengl32.lib
 )

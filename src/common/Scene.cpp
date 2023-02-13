@@ -81,11 +81,14 @@ void Scene::Update(int width, int height, float deltaSec)
     //mDirectionalLight.mTransform.RotateOnWorldAxis(glm::vec3(0.0f, 1.0f, 0.0f) * (45.0f * deltaSec));
 
     ShaderParam matrixParam{};
-    matrixParam.projectionMatrix = glm::perspective(glm::radians(mCamera.GetZoom()), (float)width / (float)height, 0.1f, 1000.0f);
+    float fov = glm::radians(mCamera.GetZoom());
+    matrixParam.projectionMatrix = glm::perspective(fov, (float)width / (float)height, 0.1f, 1000.0f);
     matrixParam.viewMatrix = mCamera.GetViewMatrix();
     matrixParam.viewProjectionMatrix = matrixParam.projectionMatrix * matrixParam.viewMatrix;
+
     matrixParam.lightDir = glm::normalize(mDirectionalLight.GetDirection());
     matrixParam.lightColor = mDirectionalLight.GetColor();
+
     for (const auto& element : mObjects)
     {
         element.second->Update(matrixParam, deltaSec);

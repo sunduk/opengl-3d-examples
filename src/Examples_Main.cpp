@@ -41,8 +41,8 @@ void PrintMenu()
 	std::cout << "18. Shader -----------------[Example07.cpp]" << std::endl;
 	std::cout << "19. Transform --------------[Example08.cpp]" << std::endl;
 	std::cout << "20. MVP:Perspective --------[Example09.cpp]" << std::endl;
-	std::cout << "21. MVP:Ortho1 -------------[Example09.cpp]" << std::endl;
-	std::cout << "22. MVP:Ortho2 -------------[Example09.cpp]" << std::endl;
+	std::cout << "21. MVP:Ortho1" << std::endl;
+	std::cout << "22. MVP:Ortho2" << std::endl;
 	std::cout << "23. Scene ------------------[Example10.cpp]" << std::endl;
 	std::cout << "Q. Quit" << std::endl;
 	std::cout << "==========================" << std::endl;

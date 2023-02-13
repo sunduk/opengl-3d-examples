@@ -8,14 +8,12 @@ out vec3 VertexColor;
 out vec2 TextureUV;
 out vec3 Normal;
 
-uniform mat4 model;
-uniform mat4 viewProjection;
+uniform mat4 mvp;
 uniform mat3 normalMatrix;
 
 void main()
 {
-	gl_Position = model * vec4(position, 1.0f);
-	gl_Position = viewProjection * gl_Position;
+	gl_Position = mvp * vec4(position, 1.0f);
 
 	Normal = normalMatrix * normal;
     VertexColor = vertex_color;

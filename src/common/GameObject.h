@@ -26,7 +26,7 @@ public:
     void DrawSimpleMesh();
 
 private:
-    void DrawMesh(const ShaderParam& shaderParam);
+    void SetMaterialProperties(const ShaderParam& shaderParam);
 
 public:
     Transform mTransform{};

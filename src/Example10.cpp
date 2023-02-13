@@ -55,10 +55,11 @@ void Example10::CreateScene()
     mScene = SceneManager::GetInstance().CreateScene();
     mBoxMesh.Initialize(mScene->mBoxShape.GetVertices(), mScene->mBoxShape.GetIndices());
 
+    CreateSingleObject();
     CreateObjects();
 }
 
-void Example10::CreateObjects()
+void Example10::CreateSingleObject()
 {
     GameObject* obj = mScene->CreateObject();
     obj->SetMesh(&mBoxMesh);
@@ -66,7 +67,10 @@ void Example10::CreateObjects()
     obj->mTransform.SetPosition(glm::vec3(0, 7.0f, 0));
     obj->mTransform.SetScale(glm::vec3(1.5f, 1.5f, 1.5f));
     mCenterBox = obj;
+}
 
+void Example10::CreateObjects()
+{
     int boxCount = 11;
     float y = -10.0f;
     while (boxCount >= 1)

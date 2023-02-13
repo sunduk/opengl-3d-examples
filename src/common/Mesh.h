@@ -15,7 +15,6 @@ public:
     virtual ~Mesh();
     void Initialize(const std::vector<Vertex>& vertices, const std::vector<unsigned int>& indices);
     void Render();
-    void Draw(const ShaderParam& shaderParam, const Material& material, const glm::mat4& modelMatrix);
 
 private:
     std::vector<Vertex> mVertices{};

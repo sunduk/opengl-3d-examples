@@ -37,6 +37,7 @@ public:
 private:
     bool CreateMaterial();
     void CreateScene();
+    void CreateSingleObject();
     void CreateObjects();
     void InitializeCamera();
     void InitializeRenderFlags();

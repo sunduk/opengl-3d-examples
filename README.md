@@ -55,7 +55,7 @@ Learn 3D rendering by OpenGL
 
 - Move to */build* folder.
 - Execute **run_cmake.bat**.
-- Double click **Examples.sln** in *generated* folder.
+- Double click **Examples.sln** in *build* folder.
 - Build **ExampleMain** project in Debug and Release mode.
 - Press F5 or Go to Debugging -> Start debug.
 - ![](https://github.com/sunduk/opengl-3d-examples/blob/main/doc/menu.png)

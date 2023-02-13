@@ -3,11 +3,11 @@
 Learn 3D rendering by OpenGL
 
 - Making an OpenGL window.
-- Drawing triangles, color, textures.
-- Vertex buffer, Index buffer.
-- Transformation coordinates.
-- Camera.
-- Lambert light shader.
+- Drawing triangles, colors and textures.
+- Making vertex buffers and index buffers.
+- Transform coordinates.
+- Making a camera.
+- Lambert lighting shader.
 - Making a 3D scene.
 
 ![](https://github.com/sunduk/opengl-3d-examples/blob/main/doc/triangle.png)

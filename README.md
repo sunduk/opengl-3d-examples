@@ -2,6 +2,14 @@
 
 Learn 3D rendering by OpenGL
 
+- OpenGL 윈도우 만들기
+- 삼각형 그리기, 색상 넣기, 텍스쳐 입히기
+- 버텍스 버퍼, 인덱스 버퍼
+- 좌표계 변환
+- 카메라
+- 램버트 조명 셰이더
+- 3D 씬 구성
+
 ![](https://github.com/sunduk/opengl-3d-examples/blob/main/doc/triangle.png)
 
 ![](https://github.com/sunduk/opengl-3d-examples/blob/main/doc/box.png)

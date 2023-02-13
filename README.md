@@ -54,6 +54,8 @@ Learn 3D rendering by OpenGL
 
 ## External libraries
 
+> 프로젝트에 포함되어 있으므로 별도로 설치할 필요는 없습니다.
+
 | name       | version            | url                                                     | purpose                 |
 |------------|--------------------|---------------------------------------------------------|-------------------------|
 | glfw       | 3.3.8              | https://github.com/glfw/glfw                            | 윈도우 생성, 이벤트 처리  |

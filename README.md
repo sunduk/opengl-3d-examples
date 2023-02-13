@@ -2,6 +2,12 @@
 
 Learn 3D rendering by OpenGL
 
+![](https://github.com/sunduk/opengl-3d-examples/blob/main/doc/triangle.png)
+
+![](https://github.com/sunduk/opengl-3d-examples/blob/main/doc/box.png)
+
+![](https://github.com/sunduk/opengl-3d-examples/blob/main/doc/pyramid.png)
+
 <br/>
 
 ## Build(VisualStudio)

@@ -8,9 +8,12 @@ Learn 3D rendering by OpenGL
 
 ![](https://github.com/sunduk/opengl-3d-examples/blob/main/doc/pyramid.png)
 
+
 <br/>
 
 ## Build(VisualStudio)
+
+> 빌드파일을 생성하려면 **[CMake](https://cmake.org/)** 가 설치되어 있어야 합니다.
 
 ### External libraries빌드
 

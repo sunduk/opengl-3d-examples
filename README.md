@@ -48,6 +48,8 @@ Learn 3D rendering by OpenGL
 - *generated*폴더에 생성된 **Examples.sln** 파일을 더블클릭 하여 열기
 - **ExampleMain**프로젝트를 Debug, Release 모드로 각각 빌드 수행
 - F5 또는 디버깅 -> 디버깅 시작 메뉴를 눌러 예제 프로그램 실행
+- ![](https://github.com/sunduk/opengl-3d-examples/blob/main/doc/menu.png)
+- 번호를 입력하고 엔터를 누르면 예제가 실행됨
 
 
 <br/>

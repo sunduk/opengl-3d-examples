@@ -568,7 +568,7 @@ unsigned int Example07::LoadTexture(const std::string& path)
             glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, imageData);
             break;
 
-        case 4:     // with alpha challen.
+        case 4:     // with alpha channel.
             glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, imageData);
             break;
         }

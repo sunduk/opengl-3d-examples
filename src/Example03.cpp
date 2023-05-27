@@ -121,9 +121,12 @@ void Example03::CreateTriangle()
     */
 
     // NDC(Normalized Device Coordinate) 기준으로 삼각형의 버텍스 좌표를 설정한다.
-    mVertices.push_back(Vertex(glm::vec3(0.0f, 1.0f, 0.0f), glm::vec3(1, 0, 0)));       // center top.
-    mVertices.push_back(Vertex(glm::vec3(-1.0f, -1.0f, 0.0f), glm::vec3(0, 1, 0)));     // left bottom.
-    mVertices.push_back(Vertex(glm::vec3(1.0f, -1.0f, 0.0f), glm::vec3(0, 0, 1)));      // right bottom.
+    glm::vec3 RED = glm::vec3(1, 0, 0);
+    glm::vec3 GREEN = glm::vec3(0, 1, 0);
+    glm::vec3 BLUE = glm::vec3(0, 0, 1);
+    mVertices.push_back(Vertex(glm::vec3(0.0f, 1.0f, 0.0f), RED));       // center top.
+    mVertices.push_back(Vertex(glm::vec3(-1.0f, -1.0f, 0.0f), GREEN));     // left bottom.
+    mVertices.push_back(Vertex(glm::vec3(1.0f, -1.0f, 0.0f), BLUE));      // right bottom.
 
     mIndices.push_back(0);  // first vertex.
     mIndices.push_back(1);  // second vertex.

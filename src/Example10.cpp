@@ -55,11 +55,11 @@ void Example10::CreateScene()
     mScene = SceneManager::GetInstance().CreateScene();
     mBoxMesh.Initialize(mScene->mBoxShape.GetVertices(), mScene->mBoxShape.GetIndices());
 
-    CreateSingleObject();
-    CreateObjects();
+    CreateSingleBox();
+    CreatePyramid();
 }
 
-void Example10::CreateSingleObject()
+void Example10::CreateSingleBox()
 {
     GameObject* obj = mScene->CreateObject();
     obj->SetMesh(&mBoxMesh);
@@ -69,7 +69,7 @@ void Example10::CreateSingleObject()
     mCenterBox = obj;
 }
 
-void Example10::CreateObjects()
+void Example10::CreatePyramid()
 {
     int boxCount = 11;
     float y = -10.0f;
@@ -250,7 +250,7 @@ unsigned int Example10::LoadTexture(const std::string& path)
             glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, imageData);
             break;
 
-        case 4:     // with alpha challen.
+        case 4:     // with alpha channel.
             glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, imageData);
             break;
         }

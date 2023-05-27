@@ -37,11 +37,14 @@ public:
 private:
     bool CreateMaterial();
     void CreateScene();
-    void CreateSingleObject();
-    void CreateObjects();
+
+    void CreateSingleBox();
+    void CreatePyramid();
+
     void InitializeCamera();
     void InitializeRenderFlags();
     void ClearBuffer();
+
     void Update();
     void UpdateCameraControl();
     unsigned int LoadTexture(const std::string& path);

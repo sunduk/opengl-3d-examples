@@ -25,6 +25,16 @@ Shader* Material::GetShader() const
     return mShader;
 }
 
+void Material::SetShader2(Shader* shader)
+{
+    mShader2 = shader;
+}
+
+Shader* Material::GetShader2() const
+{
+    return mShader2;
+}
+
 void Material::SetPropertyVec3(const std::string& name, glm::vec3 value)
 {
     mPropertiesVec3[name] = value;

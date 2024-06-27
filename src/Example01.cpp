@@ -74,7 +74,8 @@ void Example01::Run()
     while (!glfwWindowShouldClose(mGlfwWindow))
     {
         // 화면을 특정 색상으로 채운다.
-        glClearColor(0.3f, 0.3f, 0.3f, 1.0f);
+        //glClearColor(0.3f, 0.3f, 0.3f, 1.0f);
+        glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
         // 컬러버퍼와 뎁스버퍼를 지운다.
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 

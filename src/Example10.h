@@ -45,7 +45,6 @@ private:
     void InitializeRenderFlags();
     void ClearBuffer();
 
-    void Update();
     void UpdateCameraControl();
     unsigned int LoadTexture(const std::string& path);
 

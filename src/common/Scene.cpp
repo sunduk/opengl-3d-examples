@@ -83,11 +83,24 @@ void Scene::Update(int width, int height, float deltaSec)
     ShaderParam matrixParam{};
     float fov = glm::radians(mCamera.GetZoom());
     matrixParam.projectionMatrix = glm::perspective(fov, (float)width / (float)height, 0.1f, 1000.0f);
+
+    // ortho.
+    /*float size = 2.0f;
+    float windowWidth = static_cast<float>(width);
+    float windowHeight = static_cast<float>(height);
+    float ratio = size / windowHeight;
+    float horizontalSize = ratio * windowWidth;
+    float near = 0.1f;
+    float far = 1000.0f;
+    matrixParam.projectionMatrix = glm::ortho(-horizontalSize, horizontalSize, -size, size, near, far);*/
+
     matrixParam.viewMatrix = mCamera.GetViewMatrix();
     matrixParam.viewProjectionMatrix = matrixParam.projectionMatrix * matrixParam.viewMatrix;
 
     matrixParam.lightDir = glm::normalize(mDirectionalLight.GetDirection());
     matrixParam.lightColor = mDirectionalLight.GetColor();
+
+    matrixParam.cameraWorldPosition = mCamera.GetPosition();
 
     for (const auto& element : mObjects)
     {
@@ -100,4 +113,9 @@ void Scene::Update(int width, int height, float deltaSec)
 Camera& Scene::GetCamera()
 {
     return mCamera;
+}
+
+DirectionalLight& Scene::GetDirectionalLight()
+{
+    return mDirectionalLight;
 }

@@ -91,7 +91,7 @@ bool Example09::LoadShaderFromFile(std::string vertexPath, std::string fragmentP
 
 void Example09::CreateDefaultShader()
 {
-    LoadShaderFromFile("../resources/shaders/MVP.vs", "../resources/shaders/Color.fs");
+    LoadShaderFromFile("../resources/shaders/MVP.vs", "../resources/shaders/Texture.fs");
 }
 
 void Example09::CheckShaderCompileErrors(unsigned int shader, std::string type)

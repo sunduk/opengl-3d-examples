@@ -30,6 +30,11 @@ void Camera::SetPosition(glm::vec3 position)
     mPosition = position;
 }
 
+glm::vec3 Camera::GetPosition() const
+{
+    return mPosition;
+}
+
 void Camera::SetMoveDirection(glm::vec3 inputDirection)
 {
     glm::vec3 moveDirection = (mForward * -inputDirection.z) + (mRight * inputDirection.x);

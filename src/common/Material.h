@@ -18,6 +18,9 @@ public:
     void SetShader(Shader* shader);
     Shader* GetShader() const;
 
+    void SetShader2(Shader* shader);
+    Shader* GetShader2() const;
+
     void SetPropertyVec3(const std::string& name, glm::vec3 value);
     const std::map<std::string, glm::vec3>& GetPropertiesVec3() const;
 
@@ -26,6 +29,7 @@ public:
 
 private:
     Shader* mShader{};
+    Shader* mShader2{};
     std::map<std::string, glm::vec3> mPropertiesVec3{};
     std::map<std::string, unsigned int> mPropertiesUInt{};
     std::vector<unsigned int> mTextureIDs{};

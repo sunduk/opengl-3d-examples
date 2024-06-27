@@ -88,7 +88,7 @@ bool Example07::LoadShaderFromFile(std::string vertexPath, std::string fragmentP
 
 void Example07::CreateDefaultShader()
 {
-    LoadShaderFromFile("../resources/shaders/Color.vs", "../resources/shaders/Color.fs");
+    LoadShaderFromFile("../resources/shaders/Texture.vs", "../resources/shaders/Texture.fs");
 }
 
 void Example07::CheckShaderCompileErrors(unsigned int shader, std::string type)

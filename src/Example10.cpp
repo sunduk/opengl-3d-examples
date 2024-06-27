@@ -2,6 +2,7 @@
 
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
+#include "glm/gtc/random.hpp"
 #include "stb/stb_image.h"
 
 #include "GameObject.h"
@@ -116,10 +117,6 @@ void Example10::ClearBuffer()
     glfwMakeContextCurrent(mGlfwWindow);
     glClearColor(0.3f, 0.3f, 0.3f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-}
-
-void Example10::Update()
-{
 }
 
 void Example10::Render()

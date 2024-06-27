@@ -6,6 +6,7 @@
 #include "GLFW/glfw3.h"
 
 #include "Examples_Main.h"
+#include "Example00.h"
 #include "Example01.h"
 #include "Example02.h"
 #include "Example03.h"
@@ -16,6 +17,9 @@
 #include "Example08.h"
 #include "Example09.h"
 #include "Example10.h"
+#include "Example11.h"
+#include "Example12.h"
+#include "Example13.h"
 
 void PrintMenu()
 {
@@ -44,6 +48,17 @@ void PrintMenu()
 	std::cout << "21. MVP:Ortho1" << std::endl;
 	std::cout << "22. MVP:Ortho2" << std::endl;
 	std::cout << "23. Scene ------------------[Example10.cpp]" << std::endl;
+	std::cout << "24. Obj Loading ------------[Example11.cpp]" << std::endl;
+	std::cout << "25. Shader - Color ---------[Example12.cpp]" << std::endl;
+	std::cout << "26. Shader - Lambert" << std::endl;
+	std::cout << "27. Shader - HalfLambert" << std::endl;
+	std::cout << "28. Shader - Rim" << std::endl;
+	std::cout << "29. Shader - Outline" << std::endl;
+	std::cout << "30. Shader - Thickness" << std::endl;
+	std::cout << "31. Bezier Curve -----------[Example13.cpp]" << std::endl;
+	std::cout << "32. Bezier Spline" << std::endl;
+	std::cout << "33. Hermite Curve" << std::endl;
+	std::cout << "34. Hermite Spline" << std::endl;
 	std::cout << "Q. Quit" << std::endl;
 	std::cout << "==========================" << std::endl;
 }
@@ -76,6 +91,20 @@ void RunExample()
 	instance.RunWithParam(projectionType);
 }
 
+template <typename Example12, typename Example12::BasicShaderType shaderType>
+void RunExample()
+{
+	Example12 instance{};
+	instance.RunWithParam(shaderType);
+}
+
+template <typename Example13, typename Example13::CurveType curveType>
+void RunExample()
+{
+	Example13 instance{};
+	instance.RunWithParam(curveType);
+}
+
 int main()
 {
 	PrintMenu();
@@ -83,9 +112,13 @@ int main()
 	std::vector<std::function<void()>> examples
 	{
 		nullptr,
-		RunExample<Example01>,
+		
+		RunExample<Example00>,
+		
 		RunExample<Example02>,
+		
 		RunExample<Example03>,
+		
 		RunExample<Example04, UvType::Fit, GL_REPEAT, GL_NEAREST>,
 		RunExample<Example04, UvType::Smaller, GL_REPEAT, GL_NEAREST>,
 		RunExample<Example04, UvType::Smaller, GL_CLAMP_TO_EDGE, GL_NEAREST>,
@@ -93,19 +126,39 @@ int main()
 		RunExample<Example04, UvType::Smaller, GL_CLAMP_TO_BORDER, GL_NEAREST>,
 		RunExample<Example04, UvType::Bigger, GL_REPEAT, GL_LINEAR>,
 		RunExample<Example04, UvType::Bigger, GL_REPEAT, GL_NEAREST>,
+		
 		RunExample<Example05, Example05::ShaderType::TextureColor>,
 		RunExample<Example05, Example05::ShaderType::Invert>,
 		RunExample<Example05, Example05::ShaderType::Grayscale>,
 		RunExample<Example05, Example05::ShaderType::Add>,
 		RunExample<Example05, Example05::ShaderType::Multiply>,
 		RunExample<Example05, Example05::ShaderType::Lerp>,
+		
 		RunExample<Example06>,
+		
 		RunExample<Example07>,
+		
 		RunExample<Example08>,
+		
 		RunExample<Example09, Example09::ProjectionType::Perspective>,
 		RunExample<Example09, Example09::ProjectionType::Ortho1>,
 		RunExample<Example09, Example09::ProjectionType::Ortho2>,
+		
 		RunExample<Example10>,
+		
+		RunExample<Example11>,
+		
+		RunExample<Example12, Example12::BasicShaderType::Color>,
+		RunExample<Example12, Example12::BasicShaderType::Lambert>,
+		RunExample<Example12, Example12::BasicShaderType::HalfLambert>,
+		RunExample<Example12, Example12::BasicShaderType::Rim>,
+		RunExample<Example12, Example12::BasicShaderType::Outline>,
+		RunExample<Example12, Example12::BasicShaderType::Thickness>,
+
+		RunExample<Example13, Example13::CurveType::BezierCurve>,
+		RunExample<Example13, Example13::CurveType::BezierSpline>,
+		RunExample<Example13, Example13::CurveType::HermiteCurve>,
+		RunExample<Example13, Example13::CurveType::HermiteSpline>,
 	};
 
 	bool isRunning = true;

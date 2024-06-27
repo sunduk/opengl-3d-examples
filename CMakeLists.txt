@@ -24,10 +24,22 @@ source_group("Externals/glad" FILES ${EXTERNALS_GLAD})
 ########################################################
 # Resources
 file(GLOB RESOURCES
+  "resources/shaders/VertexColor.vs"
+  "resources/shaders/VertexColor.fs"
   "resources/shaders/Color.vs"
   "resources/shaders/Color.fs"
+  "resources/shaders/Texture.vs"
+  "resources/shaders/Texture.fs"
   "resources/shaders/Lambert.vs"
   "resources/shaders/Lambert.fs"
+  "resources/shaders/HalfLambert.vs"
+  "resources/shaders/HalfLambert.fs"
+  "resources/shaders/Rim.vs"
+  "resources/shaders/Rim.fs"
+  "resources/shaders/Outline.vs"
+  "resources/shaders/Outline.fs"
+  "resources/shaders/Thickness.vs"
+  "resources/shaders/Thickness.fs"
   "resources/shaders/LambertTexture.vs"
   "resources/shaders/LambertTexture.fs"
   "resources/shaders/MVP.vs"
@@ -45,6 +57,18 @@ source_group("Examples_Main" FILES ${EXAMPLES_MAIN})
 ########################################################
 # Common
 file(GLOB EXAMPLES_COMMON
+  "src/common/Hermite.h"
+  "src/common/Hermite.cpp"
+  "src/common/HermiteSpline.h"
+  "src/common/HermiteSpline.cpp"
+  "src/common/BezierSpline.h"
+  "src/common/BezierSpline.cpp"
+  "src/common/Bezier.h"
+  "src/common/Bezier.cpp"
+  "src/common/Line.h"
+  "src/common/Line.cpp"
+  "src/common/LineShape.h"
+  "src/common/LineShape.cpp"
   "src/common/BoxShape.h"
   "src/common/Camera.h"
   "src/common/Camera.cpp"
@@ -72,8 +96,18 @@ file(GLOB EXAMPLES_COMMON
   "src/common/Transform.cpp"
   "src/common/Vertex.h"
   "src/common/WindowParam.h"
+  "src/common/ObjLoader.h"
+  "src/common/ObjLoader.cpp"
 )
 source_group("ExamplesCommon" FILES ${EXAMPLES_COMMON})
+
+########################################################
+# Example00
+file(GLOB EXAMPLE00
+  "src/Example00.cpp" 
+  "src/Example00.h"
+)
+source_group("Example00_Window" FILES ${EXAMPLE00})
 
 ########################################################
 # Example01
@@ -155,11 +189,36 @@ file(GLOB EXAMPLE10
 )
 source_group("Example10_Scene" FILES ${EXAMPLE10})
 
+########################################################
+# Example11
+file(GLOB EXAMPLE11
+  "src/Example11.cpp" 
+  "src/Example11.h"
+)
+source_group("Example11_ObjLoading" FILES ${EXAMPLE11})
+
+########################################################
+# Example12
+file(GLOB EXAMPLE12
+  "src/Example12.cpp" 
+  "src/Example12.h"
+)
+source_group("Example12_Shader_Lambert" FILES ${EXAMPLE12})
+
+########################################################
+# Example13
+file(GLOB EXAMPLE13
+  "src/Example13.cpp" 
+  "src/Example13.h"
+)
+source_group("Example13_Curve" FILES ${EXAMPLE13})
+
 add_executable (ExampleMain 
   ${EXTERNALS_GLAD}
   ${RESOURCES}
   ${EXAMPLES_MAIN}
   ${EXAMPLES_COMMON}
+  ${EXAMPLE00}
   ${EXAMPLE01}
   ${EXAMPLE02}
   ${EXAMPLE03}
@@ -170,6 +229,9 @@ add_executable (ExampleMain
   ${EXAMPLE08}
   ${EXAMPLE09}
   ${EXAMPLE10}
+  ${EXAMPLE11}
+  ${EXAMPLE12}
+  ${EXAMPLE13}
 )
 
 target_link_libraries(ExampleMain

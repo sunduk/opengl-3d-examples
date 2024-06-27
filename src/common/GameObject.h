@@ -6,6 +6,7 @@
 #include "Transform.h"
 
 // forward declaration.
+class Line;
 class Material;
 class Mesh;
 class SimpleMesh;
@@ -18,15 +19,14 @@ public:
     virtual ~GameObject();
 
     void SetMesh(Mesh* mesh);
-    void SetSimpleMesh(SimpleMesh* mesh);
+    void SetLine(Line* line);
     void SetMaterial(Material* material);
     unsigned int GetInstanceId();
     void Update(const ShaderParam& shaderParam, float deltaSec);
     void DrawMesh();
-    void DrawSimpleMesh();
 
 private:
-    void SetMaterialProperties(const ShaderParam& shaderParam);
+    void SetMaterialProperties(Shader* shader, const ShaderParam& shaderParam);
 
 public:
     Transform mTransform{};
@@ -35,6 +35,6 @@ private:
     unsigned int mInstanceId{};
 
     Mesh* mMesh{};
-    SimpleMesh* mSimpleMesh{};
+    Line* mLine{};
     Material* mMaterial{};
 };

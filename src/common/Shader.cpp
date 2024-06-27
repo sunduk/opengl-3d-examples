@@ -83,8 +83,33 @@ Shader::~Shader()
 {
 }
 
+void Shader::SetDepthTestEnabled(bool isEnable)
+{
+    mIsDepthTest = isEnable;
+}
+
+void Shader::SetCullingEnabled(bool isEnable)
+{
+    mIsFaceCulling = isEnable;
+}
+
+void Shader::SetBackfaceCulling(bool isEnable)
+{
+    mIsBackfaceCulling = isEnable;
+}
+
+void Shader::SetFrontCCW(bool isEnable)
+{
+    mIsCCW = isEnable;
+}
+
 void Shader::Use()
 {
+    mIsDepthTest ? glEnable(GL_DEPTH_TEST) : glDisable(GL_DEPTH_TEST);
+    mIsFaceCulling ? glEnable(GL_CULL_FACE) : glDisable(GL_CULL_FACE);
+    mIsBackfaceCulling ? glCullFace(GL_BACK) : glCullFace(GL_FRONT);
+    mIsCCW ? glFrontFace(GL_CCW) : glFrontFace(GL_CW);
+
     glUseProgram(mID);
 }
 

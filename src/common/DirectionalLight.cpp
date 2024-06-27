@@ -22,6 +22,11 @@ const glm::vec3 DirectionalLight::GetColor() const
 	return mColor;
 }
 
+Transform& DirectionalLight::GetTransform()
+{
+	return mTransform;
+}
+
 void DirectionalLight::SetColor(glm::vec3 color)
 {
 	mColor = color;

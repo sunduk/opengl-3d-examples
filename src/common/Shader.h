@@ -11,6 +11,12 @@ public:
     Shader(std::string vertexPath, std::string fragmentPath);
     virtual ~Shader();
     bool Load(std::string vertexPath, std::string fragmentPath);
+
+    void SetDepthTestEnabled(bool isEnable);
+    void SetCullingEnabled(bool isEnable);
+    void SetBackfaceCulling(bool isEnable);
+    void SetFrontCCW(bool isEnable);
+
     void Use();
     void SetBool(const std::string& name, bool value) const;
     void SetInt(const std::string& name, int value) const;
@@ -32,6 +38,11 @@ private:
 
 private:
     unsigned int mID{};
+
+    bool mIsDepthTest;
+    bool mIsFaceCulling;
+    bool mIsBackfaceCulling;
+    bool mIsCCW;
 };
 
 struct ShaderParam
@@ -41,4 +52,5 @@ struct ShaderParam
     glm::mat4 viewProjectionMatrix{};
     glm::vec4 lightDir{};
     glm::vec3 lightColor{};
+    glm::vec3 cameraWorldPosition{};
 };

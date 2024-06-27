@@ -10,12 +10,14 @@ out vec3 Normal;
 
 uniform mat4 mvp;
 uniform mat3 normalMatrix;
+uniform mat3 modelMatrix;
 
 void main()
 {
 	gl_Position = mvp * vec4(position, 1.0f);
 
-	Normal = normalMatrix * normal;
+	//Normal = normalMatrix * normal;
+	Normal = modelMatrix * normal;
     VertexColor = vertex_color;
     TextureUV = texture_uv;
 }

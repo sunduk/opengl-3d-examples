@@ -12,6 +12,7 @@ public:
 
     const glm::vec4 GetDirection() const;
     const glm::vec3 GetColor() const;
+    Transform& GetTransform();
 
     void SetColor(glm::vec3 color);
 

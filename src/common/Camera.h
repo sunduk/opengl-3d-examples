@@ -23,6 +23,7 @@ public:
     glm::mat4 GetViewMatrix();
 
     void SetPosition(glm::vec3 position);
+    glm::vec3 GetPosition() const;
     void SetMoveDirection(glm::vec3 inputDirection);
     void AddMovement(MovementDirection direction);
     void RemoveMovement(MovementDirection direction);

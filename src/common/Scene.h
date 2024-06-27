@@ -21,6 +21,7 @@ public:
     GameObject* FindObject(unsigned int id);
     void Update(int width, int height, float deltaSec);
     Camera& GetCamera();
+    DirectionalLight& GetDirectionalLight();
 
 private:
     void ClearReservedObjects();

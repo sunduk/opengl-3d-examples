@@ -6,7 +6,6 @@
 #include "GLFW/glfw3.h"
 
 #include "Examples_Main.h"
-#include "Example00.h"
 #include "Example01.h"
 #include "Example02.h"
 #include "Example03.h"
@@ -113,7 +112,7 @@ int main()
 	{
 		nullptr,
 		
-		RunExample<Example00>,
+		RunExample<Example01>,
 		
 		RunExample<Example02>,
 		
@@ -175,7 +174,7 @@ int main()
 		else if (input >= "1" && input <= "99")
 		{
 			int number = std::stoi(input);
-			if (number <= examples.size())
+			if (number < examples.size())
 			{
 				examples[number]();
 			}

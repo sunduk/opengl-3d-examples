@@ -10,10 +10,11 @@ out vec3 Normal;
 
 uniform mat4 mvp;
 uniform mat3 normalMatrix;
+uniform float thickness;
 
 void main()
 {
-    vec3 expand = position + normal * -0.15f;
+    vec3 expand = position + normal * thickness;
     gl_Position = mvp * vec4(expand, 1.0f);
 
     Normal = normalMatrix * normal;

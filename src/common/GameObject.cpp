@@ -85,6 +85,14 @@ void GameObject::SetMaterialProperties(Shader* shader, const ShaderParam& shader
         shader->SetVec3(key, value);
     }
 
+    const std::map<std::string, float>& propertiesFloat = mMaterial->GetPropertiesFloat();
+    for (const auto& element : propertiesFloat)
+    {
+        std::string key = element.first;
+        float value = element.second;
+        shader->SetFloat(key, value);
+    }
+
     const std::vector<unsigned int> textureIDs = mMaterial->GetTextureIDs();
     for (int i = 0; i < textureIDs.size(); ++i)
     {

@@ -45,6 +45,16 @@ const std::map<std::string, glm::vec3>& Material::GetPropertiesVec3() const
     return mPropertiesVec3;
 }
 
+void Material::SetPropertyFloat(const std::string& name, float value)
+{
+    mPropertiesFloat[name] = value;
+}
+
+const std::map<std::string, float>& Material::GetPropertiesFloat() const
+{
+    return mPropertiesFloat;
+}
+
 void Material::AddTexture(unsigned int textureID)
 {
     mTextureIDs.push_back(textureID);

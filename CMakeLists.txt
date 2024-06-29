@@ -107,7 +107,7 @@ file(GLOB EXAMPLE00
   "src/Example00.cpp" 
   "src/Example00.h"
 )
-source_group("Example00_Window" FILES ${EXAMPLE00})
+source_group("Example00_Test" FILES ${EXAMPLE00})
 
 ########################################################
 # Example01
@@ -203,7 +203,7 @@ file(GLOB EXAMPLE12
   "src/Example12.cpp" 
   "src/Example12.h"
 )
-source_group("Example12_Shader_Lambert" FILES ${EXAMPLE12})
+source_group("Example12_Shader" FILES ${EXAMPLE12})
 
 ########################################################
 # Example13

@@ -114,17 +114,15 @@ bool Example12::CreateMaterial()
         break;
 
     case BasicShaderType::Thickness:
-        //TODO:적당한 사람 메시 구하기. lowpoly, texture
-        ret = mDefaultShader.Load("../resources/shaders/Thickness.vs", "../resources/shaders/HalfLambert.fs");
+        ret = mDefaultShader.Load("../resources/shaders/Thickness.vs", "../resources/shaders/Thickness.fs");
         if (!ret)
         {
             return false;
         }
 
-        //mRobotTextureId0 = LoadTexture("../resources/models/robot/main_texture.png");
-        //mDefaultMaterial.AddTexture(mRobotTextureId0);
+        mRobotTextureId0 = LoadTexture("../resources/models/policeman/palette.png");
+        mDefaultMaterial.AddTexture(mRobotTextureId0);
         mDefaultMaterial.SetShader(&mDefaultShader);
-        mDefaultMaterial.SetPropertyVec3("customColor", glm::vec3(0, 1, 0));
         break;
     }
 
@@ -139,7 +137,7 @@ void Example12::CreateScene()
     {
     case BasicShaderType::Thickness:
     {
-        ObjLoader objSphere("../resources/models/shape/blender_monkey.obj");
+        ObjLoader objSphere("../resources/models/policeman/policeman.obj");
         mSphereMesh.Initialize(objSphere.mVertices, objSphere.mIndices);
     }
     break;
@@ -188,7 +186,18 @@ void Example12::ClearBuffer()
 void Example12::Render()
 {
     UpdateCameraControl();
-    //mScene->GetDirectionalLight().GetTransform().RotateOnWorldAxis(glm::vec3(0, 45 * mDeltaTime, 0));
+
+    if (BasicShaderType::Thickness == mShaderType)
+    {
+        float sinValue = glm::sin(mElapsedTime);
+        float a = -0.02f;
+        float b = 0.08f;
+        float t = (sinValue + 1.0f) * 0.5f;
+        float thickness = a + (b - a) * t;
+        mDefaultMaterial.SetPropertyFloat("thickness", thickness);
+        mElapsedTime += mDeltaTime;
+    }
+
     mScene->Update(mWindowParam.width, mWindowParam.height, mDeltaTime);
 }
 

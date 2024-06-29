@@ -74,6 +74,8 @@ private:
 
     Scene* mScene{};
 
+    float mElapsedTime{};
+
     // shape.
     Mesh mSphereMesh{};
     GameObject* mSphereObject{};

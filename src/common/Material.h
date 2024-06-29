@@ -24,6 +24,9 @@ public:
     void SetPropertyVec3(const std::string& name, glm::vec3 value);
     const std::map<std::string, glm::vec3>& GetPropertiesVec3() const;
 
+    void SetPropertyFloat(const std::string& name, float value);
+    const std::map<std::string, float>& GetPropertiesFloat() const;
+
     void AddTexture(unsigned int textureID);
     const std::vector<unsigned int> GetTextureIDs() const;
 
@@ -32,5 +35,6 @@ private:
     Shader* mShader2{};
     std::map<std::string, glm::vec3> mPropertiesVec3{};
     std::map<std::string, unsigned int> mPropertiesUInt{};
+    std::map<std::string, float> mPropertiesFloat{};
     std::vector<unsigned int> mTextureIDs{};
 };

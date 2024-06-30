@@ -40,11 +40,13 @@ void Example12::Initialize()
 
 void Example12::CleanUp()
 {
-    glDeleteBuffers(1, &mRobotTextureId0);
+    glDeleteBuffers(1, &mPaletteTextureId0);
 }
 
 bool Example12::CreateMaterial()
 {
+    mUseSphere = false;
+
     bool ret = false;
     switch (mShaderType)
     {
@@ -59,11 +61,46 @@ bool Example12::CreateMaterial()
         mDefaultMaterial.SetPropertyVec3("customColor", glm::vec3(0, 1, 0));
         break;
 
-    case BasicShaderType::Lambert:
-        ret = mDefaultShader.Load("../resources/shaders/Lambert.vs", "../resources/shaders/Lambert.fs");
+    case BasicShaderType::Texture:
+        ret = mDefaultShader.Load("../resources/shaders/ColorTexture.vs", "../resources/shaders/ColorTexture.fs");
         if (!ret)
         {
             return false;
+        }
+
+        if (mUseSphere)
+        {
+            mPaletteTextureId0 = LoadTexture("../resources/opengl_texture.png");
+        }
+        else
+        {
+            mPaletteTextureId0 = LoadTexture("../resources/models/policeman/palette.png");
+        }
+
+        mDefaultMaterial.AddTexture(mPaletteTextureId0);
+        mDefaultMaterial.SetPropertyVec3("customColor", glm::vec3(1, 1, 1));
+        mDefaultMaterial.SetShader(&mDefaultShader);
+        break;
+
+    case BasicShaderType::Lambert:
+        if (mUseSphere)
+        {
+            ret = mDefaultShader.Load("../resources/shaders/Lambert.vs", "../resources/shaders/Lambert.fs");
+            if (!ret)
+            {
+                return false;
+            }
+        }
+        else
+        {
+            ret = mDefaultShader.Load("../resources/shaders/LambertTexture.vs", "../resources/shaders/LambertTexture.fs");
+            if (!ret)
+            {
+                return false;
+            }
+
+            mPaletteTextureId0 = LoadTexture("../resources/models/policeman/palette.png");
+            mDefaultMaterial.AddTexture(mPaletteTextureId0);
         }
 
         mDefaultMaterial.SetShader(&mDefaultShader);
@@ -71,37 +108,87 @@ bool Example12::CreateMaterial()
         break;
 
     case BasicShaderType::HalfLambert:
-        ret = mDefaultShader.Load("../resources/shaders/HalfLambert.vs", "../resources/shaders/HalfLambert.fs");
-        if (!ret)
+        if (mUseSphere)
         {
-            return false;
+            ret = mDefaultShader.Load("../resources/shaders/HalfLambert.vs", "../resources/shaders/HalfLambert.fs");
+            if (!ret)
+            {
+                return false;
+            }
+
+            mDefaultMaterial.SetPropertyVec3("customColor", glm::vec3(0, 1, 0));
+        }
+        else
+        {
+            ret = mDefaultShader.Load("../resources/shaders/HalfLambertTexture.vs", "../resources/shaders/HalfLambertTexture.fs");
+            if (!ret)
+            {
+                return false;
+            }
+
+            mPaletteTextureId0 = LoadTexture("../resources/models/policeman/palette.png");
+            mDefaultMaterial.AddTexture(mPaletteTextureId0);
+
+            mDefaultMaterial.SetPropertyVec3("customColor", glm::vec3(1, 1, 1));
         }
 
         mDefaultMaterial.SetShader(&mDefaultShader);
-        mDefaultMaterial.SetPropertyVec3("customColor", glm::vec3(0, 1, 0));
         break;
 
     case BasicShaderType::Rim:
-        ret = mDefaultShader.Load("../resources/shaders/Rim.vs", "../resources/shaders/Rim.fs");
-        if (!ret)
+        if (mUseSphere)
         {
-            return false;
+            ret = mDefaultShader.Load("../resources/shaders/Rim.vs", "../resources/shaders/Rim.fs");
+            if (!ret)
+            {
+                return false;
+            }
+
+            mDefaultMaterial.SetPropertyVec3("customColor", glm::vec3(0, 1, 0));
+        }
+        else
+        {
+            ret = mDefaultShader.Load("../resources/shaders/RimTexture.vs", "../resources/shaders/RimTexture.fs");
+            if (!ret)
+            {
+                return false;
+            }
+
+            mPaletteTextureId0 = LoadTexture("../resources/models/policeman/palette.png");
+            mDefaultMaterial.AddTexture(mPaletteTextureId0);
+            mDefaultMaterial.SetPropertyVec3("customColor", glm::vec3(1, 1, 1));
         }
 
         mDefaultMaterial.SetShader(&mDefaultShader);
-        mDefaultMaterial.SetPropertyVec3("customColor", glm::vec3(0, 1, 0));
         break;
 
     case BasicShaderType::Outline:
-        ret = mDefaultShader.Load("../resources/shaders/HalfLambert.vs", "../resources/shaders/HalfLambert.fs");
-        if (!ret)
+        if (mUseSphere)
         {
-            return false;
+            ret = mDefaultShader.Load("../resources/shaders/HalfLambert.vs", "../resources/shaders/HalfLambert.fs");
+            if (!ret)
+            {
+                return false;
+            }
+
+            mDefaultMaterial.SetPropertyVec3("customColor", glm::vec3(0, 1, 0));
+        }
+        else
+        {
+            ret = mDefaultShader.Load("../resources/shaders/HalfLambertTexture.vs", "../resources/shaders/HalfLambertTexture.fs");
+            if (!ret)
+            {
+                return false;
+            }
+
+            mPaletteTextureId0 = LoadTexture("../resources/models/policeman/palette.png");
+            mDefaultMaterial.AddTexture(mPaletteTextureId0);
+            mDefaultMaterial.SetPropertyVec3("customColor", glm::vec3(1, 1, 1));
         }
 
         mDefaultMaterial.SetShader(&mDefaultShader);
-        mDefaultMaterial.SetPropertyVec3("customColor", glm::vec3(0, 1, 0));
 
+        // Outline shader.
         ret = mOutlineShader.Load("../resources/shaders/Outline.vs", "../resources/shaders/Outline.fs");
         if (!ret)
         {
@@ -114,14 +201,28 @@ bool Example12::CreateMaterial()
         break;
 
     case BasicShaderType::Thickness:
-        ret = mDefaultShader.Load("../resources/shaders/Thickness.vs", "../resources/shaders/Thickness.fs");
-        if (!ret)
+        if (mUseSphere)
         {
-            return false;
+            ret = mDefaultShader.Load("../resources/shaders/ThicknessHalfLambert.vs", "../resources/shaders/HalfLambert.fs");
+            if (!ret)
+            {
+                return false;
+            }
+
+            mDefaultMaterial.SetPropertyVec3("customColor", glm::vec3(0, 1, 0));
+        }
+        else
+        {
+            ret = mDefaultShader.Load("../resources/shaders/Thickness.vs", "../resources/shaders/Thickness.fs");
+            if (!ret)
+            {
+                return false;
+            }
+
+            mPaletteTextureId0 = LoadTexture("../resources/models/policeman/palette.png");
+            mDefaultMaterial.AddTexture(mPaletteTextureId0);
         }
 
-        mRobotTextureId0 = LoadTexture("../resources/models/policeman/palette.png");
-        mDefaultMaterial.AddTexture(mRobotTextureId0);
         mDefaultMaterial.SetShader(&mDefaultShader);
         break;
     }
@@ -133,21 +234,15 @@ void Example12::CreateScene()
 {
     mScene = SceneManager::GetInstance().CreateScene();
 
-    switch (mShaderType)
-    {
-    case BasicShaderType::Thickness:
-    {
-        ObjLoader objSphere("../resources/models/policeman/policeman.obj");
-        mSphereMesh.Initialize(objSphere.mVertices, objSphere.mIndices);
-    }
-    break;
-
-    default:
+    if (mUseSphere)
     {
         ObjLoader objSphere("../resources/models/shape/sphere.obj");
         mSphereMesh.Initialize(objSphere.mVertices, objSphere.mIndices);
     }
-    break;
+    else
+    {
+        ObjLoader objSphere("../resources/models/policeman/policeman.obj");
+        mSphereMesh.Initialize(objSphere.mVertices, objSphere.mIndices);
     }
 
     mSphereObject = mScene->CreateObject();
@@ -161,7 +256,16 @@ void Example12::CreateScene()
 void Example12::InitializeCamera()
 {
     Camera& mainCamera = mScene->GetCamera();
-    mCameraBeginPosition = glm::vec3(0.0f, 0.0f, 5.0f);
+    if (mUseSphere)
+    {
+        mCameraBeginPosition = glm::vec3(0.0f, 0.0f, 5.0f);
+    }
+    else
+    {
+        mCameraBeginPosition = glm::vec3(-1.0f, 1.5f, 5.0f);
+        mainCamera.AddYaw(10.0f);
+    }
+
     mainCamera.SetPosition(mCameraBeginPosition);
     mainCamera.SetSpeed(2.0f);
     mCameraBeginZoom = 40.0f;
@@ -192,7 +296,7 @@ void Example12::Render()
         float sinValue = glm::sin(mElapsedTime);
         float a = -0.02f;
         float b = 0.08f;
-        float t = (sinValue + 1.0f) * 0.5f;
+        float t = (sinValue + 1.0f) * 0.5f;     // (-1 ~ +1)범위를 (0 ~ 1)로 조정하기 위한 계산.
         float thickness = a + (b - a) * t;
         mDefaultMaterial.SetPropertyFloat("thickness", thickness);
         mElapsedTime += mDeltaTime;

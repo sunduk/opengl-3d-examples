@@ -74,4 +74,11 @@ private:
 
     Mesh mDiceMesh{};
     GameObject* mDice{};
+
+    // policeman.
+    Mesh mPolicemanMesh{};
+    GameObject* mPoliceman{};
+
+    unsigned int mPolicemanTextureId0{};
+    Material mPolicemanMaterial{};
 };

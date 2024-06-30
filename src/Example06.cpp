@@ -387,9 +387,9 @@ void Example06::CreateRectangle()
     // 회전 행렬
     //---------------------------------------------
     // 회전 값.
-    float rotationX = glm::radians(0.0f);
-    float rotationY = glm::radians(0.0f);
-    float rotationZ = glm::radians(45.0f);
+    constexpr float rotationX = glm::radians(0.0f);
+    constexpr float rotationY = glm::radians(0.0f);
+    constexpr float rotationZ = glm::radians(45.0f);
 
     // 각 축 별로 cos, sin값을 구한다.
     float cosX = glm::cos(rotationX);

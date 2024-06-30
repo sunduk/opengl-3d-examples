@@ -58,6 +58,10 @@ bool Example11::CreateMaterial()
     mDiceMaterial.AddTexture(mDiceTextureId0);
     mDiceMaterial.SetShader(&mLambertTextureShader);
 
+    mPolicemanTextureId0 = LoadTexture("../resources/models/policeman/palette.png");
+    mPolicemanMaterial.AddTexture(mPolicemanTextureId0);
+    mPolicemanMaterial.SetShader(&mLambertTextureShader);
+
     return true;
 }
 
@@ -79,7 +83,7 @@ void Example11::CreateScene()
     mRobot2->SetMesh(&mRobotMesh2);
     mRobot2->SetMaterial(&mRobotMaterial);
     mRobot2->mTransform.SetPosition(glm::vec3(3, 0, 0));
-    mRobot2->mTransform.SetEulerAnglesOnLocalAxis(glm::vec3(0, 15.0f, 0));
+    mRobot2->mTransform.SetEulerAnglesOnLocalAxis(glm::vec3(0, -35.0f, 0));
 
     ObjLoader objDice("../resources/models/dice/dice01.obj");
     mDiceMesh.Initialize(objDice.mVertices, objDice.mIndices);
@@ -88,6 +92,15 @@ void Example11::CreateScene()
     mDice->SetMaterial(&mDiceMaterial);
     mDice->mTransform.SetPosition(glm::vec3(0, 0, 3));
     mDice->mTransform.SetEulerAnglesOnLocalAxis(glm::vec3(0, 0.0f, 0));
+
+    ObjLoader objPoliceman("../resources/models/policeman/policeman.obj");
+    mPolicemanMesh.Initialize(objPoliceman.mVertices, objPoliceman.mIndices);
+    mPoliceman = mScene->CreateObject();
+    mPoliceman->SetMesh(&mPolicemanMesh);
+    mPoliceman->SetMaterial(&mPolicemanMaterial);
+    mPoliceman->mTransform.SetPosition(glm::vec3(0, 0, -5));
+    mPoliceman->mTransform.SetScale(glm::vec3(2.5f, 2.5f, 2.5f));
+    mPoliceman->mTransform.SetEulerAnglesOnLocalAxis(glm::vec3(0, -25.0f, 0));
 
     mScene->GetDirectionalLight().GetTransform().SetEulerAnglesOnLocalAxis(glm::vec3(-20, 10, 0));
 }

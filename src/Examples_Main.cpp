@@ -49,15 +49,16 @@ void PrintMenu()
 	std::cout << "23. Scene ------------------[Example10.cpp]" << std::endl;
 	std::cout << "24. Obj Loading ------------[Example11.cpp]" << std::endl;
 	std::cout << "25. Shader - Color ---------[Example12.cpp]" << std::endl;
-	std::cout << "26. Shader - Lambert" << std::endl;
-	std::cout << "27. Shader - HalfLambert" << std::endl;
-	std::cout << "28. Shader - Rim" << std::endl;
-	std::cout << "29. Shader - Outline" << std::endl;
-	std::cout << "30. Shader - Thickness" << std::endl;
-	std::cout << "31. Bezier Curve -----------[Example13.cpp]" << std::endl;
-	std::cout << "32. Bezier Spline" << std::endl;
-	std::cout << "33. Hermite Curve" << std::endl;
-	std::cout << "34. Hermite Spline" << std::endl;
+	std::cout << "26. Shader - Texture" << std::endl;
+	std::cout << "27. Shader - Lambert" << std::endl;
+	std::cout << "28. Shader - HalfLambert" << std::endl;
+	std::cout << "29. Shader - Rim" << std::endl;
+	std::cout << "30. Shader - Outline" << std::endl;
+	std::cout << "31. Shader - Thickness" << std::endl;
+	std::cout << "32. Bezier Curve -----------[Example13.cpp]" << std::endl;
+	std::cout << "33. Bezier Spline" << std::endl;
+	std::cout << "34. Hermite Curve" << std::endl;
+	std::cout << "35. Hermite Spline" << std::endl;
 	std::cout << "Q. Quit" << std::endl;
 	std::cout << "==========================" << std::endl;
 }
@@ -148,6 +149,7 @@ int main()
 		RunExample<Example11>,
 		
 		RunExample<Example12, Example12::BasicShaderType::Color>,
+		RunExample<Example12, Example12::BasicShaderType::Texture>,
 		RunExample<Example12, Example12::BasicShaderType::Lambert>,
 		RunExample<Example12, Example12::BasicShaderType::HalfLambert>,
 		RunExample<Example12, Example12::BasicShaderType::Rim>,

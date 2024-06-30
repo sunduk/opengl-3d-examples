@@ -31,6 +31,7 @@ public:
     enum class BasicShaderType
     {
         Color,
+        Texture,
         Lambert,
         HalfLambert,
         Rim,
@@ -70,7 +71,7 @@ private:
     Material mDefaultMaterial{};
     Shader mOutlineShader{};
 
-    unsigned int mRobotTextureId0{};
+    unsigned int mPaletteTextureId0{};
 
     Scene* mScene{};
 
@@ -79,4 +80,6 @@ private:
     // shape.
     Mesh mSphereMesh{};
     GameObject* mSphereObject{};
+
+    bool mUseSphere{};
 };

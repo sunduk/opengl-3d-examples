@@ -39,10 +39,10 @@ private:
 private:
     unsigned int mID{};
 
-    bool mIsDepthTest;
-    bool mIsFaceCulling;
-    bool mIsBackfaceCulling;
-    bool mIsCCW;
+    bool mIsDepthTest{ true };
+    bool mIsFaceCulling{ true };
+    bool mIsBackfaceCulling{ true };
+    bool mIsCCW{ true };
 };
 
 struct ShaderParam

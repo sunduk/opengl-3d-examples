@@ -18,6 +18,7 @@ Learn 3D rendering by OpenGL
 
 ![](https://github.com/sunduk/opengl-3d-examples/blob/main/doc/pyramid.png)
 
+![](https://github.com/sunduk/opengl-3d-examples/blob/main/doc/objloading.png)
 
 <br/>
 

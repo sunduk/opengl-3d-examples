@@ -221,6 +221,8 @@ bool Example12::CreateMaterial()
 
             mPaletteTextureId0 = LoadTexture("../resources/models/policeman/palette.png");
             mDefaultMaterial.AddTexture(mPaletteTextureId0);
+
+            mDefaultMaterial.SetPropertyFloat("thickness", 0.05f);
         }
 
         mDefaultMaterial.SetShader(&mDefaultShader);
@@ -250,7 +252,7 @@ void Example12::CreateScene()
     mSphereObject->SetMaterial(&mDefaultMaterial);
     mSphereObject->mTransform.SetPosition(glm::vec3(0, 0, 0));
 
-    mScene->GetDirectionalLight().GetTransform().SetEulerAnglesOnLocalAxis(glm::vec3(-45, 90, 0));
+    mScene->GetDirectionalLight().GetTransform().SetEulerAnglesOnLocalAxis(glm::vec3(-35, -20, 0));
 }
 
 void Example12::InitializeCamera()
@@ -262,13 +264,13 @@ void Example12::InitializeCamera()
     }
     else
     {
-        mCameraBeginPosition = glm::vec3(-1.0f, 1.5f, 5.0f);
+        mCameraBeginPosition = glm::vec3(-0.8f, 1.0f, 5.0f);
         mainCamera.AddYaw(10.0f);
     }
 
     mainCamera.SetPosition(mCameraBeginPosition);
     mainCamera.SetSpeed(2.0f);
-    mCameraBeginZoom = 40.0f;
+    mCameraBeginZoom = 30.0f;
     mainCamera.SetZoome(mCameraBeginZoom);
 }
 
@@ -291,16 +293,16 @@ void Example12::Render()
 {
     UpdateCameraControl();
 
-    if (BasicShaderType::Thickness == mShaderType)
-    {
-        float sinValue = glm::sin(mElapsedTime);
-        float a = -0.02f;
-        float b = 0.08f;
-        float t = (sinValue + 1.0f) * 0.5f;     // (-1 ~ +1)범위를 (0 ~ 1)로 조정하기 위한 계산.
-        float thickness = a + (b - a) * t;
-        mDefaultMaterial.SetPropertyFloat("thickness", thickness);
-        mElapsedTime += mDeltaTime;
-    }
+    //if (BasicShaderType::Thickness == mShaderType)
+    //{
+    //    float sinValue = glm::sin(mElapsedTime);
+    //    float a = -0.02f;
+    //    float b = 0.08f;
+    //    float t = (sinValue + 1.0f) * 0.5f;     // (-1 ~ +1)범위를 (0 ~ 1)로 조정하기 위한 계산.
+    //    float thickness = a + (b - a) * t;
+    //    mDefaultMaterial.SetPropertyFloat("thickness", thickness);
+    //    mElapsedTime += mDeltaTime;
+    //}
 
     mScene->Update(mWindowParam.width, mWindowParam.height, mDeltaTime);
 }

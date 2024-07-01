@@ -55,14 +55,23 @@ bool Example13::CreateMaterial()
         return false;
     }
 
-    mDefaultShader.SetCullingEnabled(false);
-    mDefaultMaterial.SetShader(&mDefaultShader);
+    mLineMaterial.SetShader(&mDefaultShader);
+
+
+    ret = mColorShader.Load("../resources/shaders/Color.vs", "../resources/shaders/Color.fs");
+    if (!ret)
+    {
+        return false;
+    }
+    mLineShapeMaterial.SetShader(&mColorShader);
 
     return true;
 }
 
 void Example13::CreateScene()
 {
+    bool useThickLine = true;
+
     mScene = SceneManager::GetInstance().CreateScene();
     InitializeCamera();
 
@@ -85,27 +94,30 @@ void Example13::CreateScene()
         // Sphere.
         GameObject* beginObj = mScene->CreateObject();
         beginObj->SetMesh(&mSphereMesh);
-        beginObj->SetMaterial(&mDefaultMaterial);
+        beginObj->SetMaterial(&mLineMaterial);
         beginObj->mTransform.SetPosition(begin);
         beginObj->mTransform.SetScale(glm::vec3(0.05f, 0.05f, 0.05f));
 
         GameObject* endObj = mScene->CreateObject();
         endObj->SetMesh(&mSphereMesh);
-        endObj->SetMaterial(&mDefaultMaterial);
+        endObj->SetMaterial(&mLineMaterial);
         endObj->mTransform.SetPosition(end);
         endObj->mTransform.SetScale(glm::vec3(0.05f, 0.05f, 0.05f));
 
         GameObject* controlPointObj0 = mScene->CreateObject();
         controlPointObj0->SetMesh(&mSphereMesh);
-        controlPointObj0->SetMaterial(&mDefaultMaterial);
+        controlPointObj0->SetMaterial(&mLineMaterial);
         controlPointObj0->mTransform.SetPosition(controlPoint0);
         controlPointObj0->mTransform.SetScale(glm::vec3(0.05f, 0.05f, 0.05f));
 
         GameObject* controlPointObj1 = mScene->CreateObject();
         controlPointObj1->SetMesh(&mSphereMesh);
-        controlPointObj1->SetMaterial(&mDefaultMaterial);
+        controlPointObj1->SetMaterial(&mLineMaterial);
         controlPointObj1->mTransform.SetPosition(controlPoint1);
         controlPointObj1->mTransform.SetScale(glm::vec3(0.05f, 0.05f, 0.05f));
+
+        // thick line.
+        LineShape lineShape(begin);
 
         std::vector<Vertex> lines;
         glm::vec3 prev = begin;
@@ -113,19 +125,26 @@ void Example13::CreateScene()
         {
             glm::vec3 pos = bezier.Evaluate(i / 20.0f);
             
+            // thin line.
             lines.push_back({ prev , glm::vec3(1,0,0)});
             lines.push_back({ pos, glm::vec3(1,0,0) });
             prev = pos;
 
+            // thick line.
+            lineShape.AddPosition(pos);
+
             // Sphere.
             GameObject* sphere = mScene->CreateObject();
             sphere->SetMesh(&mSphereMesh);
-            sphere->SetMaterial(&mDefaultMaterial);
+            sphere->SetMaterial(&mLineMaterial);
             sphere->mTransform.SetPosition(pos);
             sphere->mTransform.SetScale(glm::vec3(0.05f, 0.05f, 0.05f));
         }
 
         mLine.Initialize(lines);
+
+        // thick line.
+        mLineMesh.Initialize(lineShape.mVertices, lineShape.mIndices);
     }
     break;
 
@@ -172,6 +191,9 @@ void Example13::CreateScene()
             spline.Add(v);
         }
 
+        // thick line.
+        LineShape lineShape(begin);
+
         glm::vec3 prevPos = begin;
         std::vector<Vertex> lines;
         for (int i = 1; i <= 60; ++i)
@@ -181,9 +203,19 @@ void Example13::CreateScene()
             lines.push_back({ prevPos, glm::vec3(1,0,0) });
             lines.push_back({ pos, glm::vec3(1,0,0) });
             prevPos = pos;
+
+            // thick line.
+            lineShape.AddPosition(pos);
         }
 
         mLine.Initialize(lines);
+
+        Camera& mainCamera = mScene->GetCamera();
+        mCameraBeginPosition = glm::vec3(3.0f, 1.0f, 10.0f);
+        mainCamera.SetPosition(mCameraBeginPosition);
+
+        // thick line.
+        mLineMesh.Initialize(lineShape.mVertices, lineShape.mIndices);
     }
     break;
 
@@ -197,15 +229,22 @@ void Example13::CreateScene()
         Hermite hermite;
         hermite.Set(begin, tangentU, end, tangentV);
 
+        // thick line.
+        LineShape lineShape(begin);
+
         glm::vec3 prevPos = begin;
         std::vector<Vertex> lines;
         for (int i = 1; i <= 20; ++i)
         {
             glm::vec3 pos = hermite.Evaluate(i / 20.0f);
-            
+
+            // thin line.
             lines.push_back({ prevPos, glm::vec3(1,0,0) });
             lines.push_back({ pos, glm::vec3(1,0,0) });
             prevPos = pos;
+
+            // thick line.
+            lineShape.AddPosition(pos);
 
             // Sphere.
             /*GameObject* sphere = mScene->CreateObject();
@@ -216,6 +255,31 @@ void Example13::CreateScene()
         }
 
         mLine.Initialize(lines);
+
+        // thick line.
+        mLineMesh.Initialize(lineShape.mVertices, lineShape.mIndices);
+
+        // debugging.
+        std::vector<Vertex> debugLineVertices;
+        debugLineVertices.push_back({ begin, glm::vec3(1,0,0) });
+        debugLineVertices.push_back({ begin + tangentU, glm::vec3(1,0,0) });
+        mDebugLine0.Initialize(debugLineVertices);
+        
+        GameObject* objDebug = mScene->CreateObject();
+        objDebug->SetLine(&mDebugLine0);
+        objDebug->SetMaterial(&mLineMaterial);
+        objDebug->mTransform.SetPosition(glm::vec3(0, 0, 0));
+
+
+        debugLineVertices.clear();
+        debugLineVertices.push_back({ end, glm::vec3(1,0,0) });
+        debugLineVertices.push_back({ end + tangentV, glm::vec3(1,0,0) });
+        mDebugLine1.Initialize(debugLineVertices);
+
+        GameObject* objDebug2 = mScene->CreateObject();
+        objDebug2->SetLine(&mDebugLine1);
+        objDebug2->SetMaterial(&mLineMaterial);
+        objDebug2->mTransform.SetPosition(glm::vec3(0, 0, 0));
     }
     break;
 
@@ -230,6 +294,9 @@ void Example13::CreateScene()
         hermiteSpline.Add(glm::vec3(0, -2, 2), glm::vec3(-5, 2, 0));
         hermiteSpline.Add(end, glm::vec3(0, -5, 0));
 
+        // thick line.
+        LineShape lineShape(begin);
+
         glm::vec3 prevPos = begin;
         std::vector<Vertex> lines;
         for (int i = 1; i <= 100; ++i)
@@ -240,6 +307,9 @@ void Example13::CreateScene()
             lines.push_back({ pos, glm::vec3(1,0,0) });
             prevPos = pos;
 
+            // thick line.
+            lineShape.AddPosition(pos);
+
             // Sphere.
             /*GameObject* sphere = mScene->CreateObject();
             sphere->SetMesh(&mSphereMesh);
@@ -249,13 +319,28 @@ void Example13::CreateScene()
         }
 
         mLine.Initialize(lines);
+
+        // thick line.
+        mLineMesh.Initialize(lineShape.mVertices, lineShape.mIndices);
+
+        Camera& mainCamera = mScene->GetCamera();
+        mCameraBeginPosition = glm::vec3(1.0f, 0.0f, 20.0f);
+        mainCamera.SetPosition(mCameraBeginPosition);
     }
     break;
     }
 
     GameObject* obj = mScene->CreateObject();
-    obj->SetLine(&mLine);
-    obj->SetMaterial(&mDefaultMaterial);
+    if (useThickLine)
+    {
+        obj->SetMesh(&mLineMesh);
+        obj->SetMaterial(&mLineShapeMaterial);
+    }
+    else
+    {
+        obj->SetLine(&mLine);
+        obj->SetMaterial(&mLineMaterial);
+    }
     obj->mTransform.SetPosition(glm::vec3(0, 0, 0));
 
     mScene->GetDirectionalLight().GetTransform().SetEulerAnglesOnLocalAxis(glm::vec3(-45, 90, 0));

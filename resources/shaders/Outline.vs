@@ -7,7 +7,7 @@ uniform mat4 mvp;
 
 void main()
 {
-	vec3 expand = normal * 0.01f;
+	vec3 expand = normal * 0.015f;
 	vec3 position2 = position + expand;
 	gl_Position = mvp * vec4(position2, 1.0f);
 }

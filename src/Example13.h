@@ -67,8 +67,11 @@ private:
     float mCameraBeginZoom{};
 
     Shader mDefaultShader{};
-    Material mDefaultMaterial{};
+    Shader mColorShader{};
     Shader mOutlineShader{};
+
+    Material mLineMaterial{};
+    Material mLineShapeMaterial{};
 
     unsigned int mRobotTextureId0{};
 
@@ -76,4 +79,9 @@ private:
 
     Mesh mSphereMesh{};
     Line mLine;
+
+    Mesh mLineMesh{};
+
+    Line mDebugLine0{};
+    Line mDebugLine1{};
 };

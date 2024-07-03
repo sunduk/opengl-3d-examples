@@ -65,6 +65,8 @@ source_group("Examples_Main" FILES ${EXAMPLES_MAIN})
 ########################################################
 # Common
 file(GLOB EXAMPLES_COMMON
+  "src/common/CatmullRomSpline.h"
+  "src/common/CatmullRomSpline.cpp"
   "src/common/Hermite.h"
   "src/common/Hermite.cpp"
   "src/common/HermiteSpline.h"

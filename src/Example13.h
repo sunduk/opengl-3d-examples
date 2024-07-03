@@ -36,7 +36,8 @@ public:
         BezierCurve,
         BezierSpline,
         HermiteCurve,
-        HermiteSpline
+        HermiteSpline,
+        CatmullRomSpline
     };
 
 public:

@@ -7,6 +7,7 @@
 
 #include "Bezier.h"
 #include "BezierSpline.h"
+#include "CatmullRomSpline.h"
 #include "GameObject.h"
 #include "Hermite.h"
 #include "HermiteSpline.h"
@@ -70,7 +71,7 @@ bool Example13::CreateMaterial()
 
 void Example13::CreateScene()
 {
-    bool useThickLine = true;
+    bool useThickLine = false;
 
     mScene = SceneManager::GetInstance().CreateScene();
     InitializeCamera();
@@ -124,9 +125,9 @@ void Example13::CreateScene()
         for (int i = 1; i <= 20; ++i)
         {
             glm::vec3 pos = bezier.Evaluate(i / 20.0f);
-            
+
             // thin line.
-            lines.push_back({ prev , glm::vec3(1,0,0)});
+            lines.push_back({ prev , glm::vec3(1,0,0) });
             lines.push_back({ pos, glm::vec3(1,0,0) });
             prev = pos;
 
@@ -264,7 +265,7 @@ void Example13::CreateScene()
         debugLineVertices.push_back({ begin, glm::vec3(1,0,0) });
         debugLineVertices.push_back({ begin + tangentU, glm::vec3(1,0,0) });
         mDebugLine0.Initialize(debugLineVertices);
-        
+
         GameObject* objDebug = mScene->CreateObject();
         objDebug->SetLine(&mDebugLine0);
         objDebug->SetMaterial(&mLineMaterial);
@@ -325,6 +326,66 @@ void Example13::CreateScene()
 
         Camera& mainCamera = mScene->GetCamera();
         mCameraBeginPosition = glm::vec3(1.0f, 0.0f, 20.0f);
+        mainCamera.SetPosition(mCameraBeginPosition);
+    }
+    break;
+
+    case CurveType::CatmullRomSpline:
+    {
+        std::vector<glm::vec3> points = {
+            { 0.0f,   0.0f,  0.0f},
+            { 5.0f,  -5.0f,  0.0f},
+            {10.0f,  -1.5f,  0.0f},
+            {15.0f,  -5.0f,  0.0f},
+            {17.0f,   0.5f,  0.0f},
+        };
+
+        CatmullRomSpline catmullRomSpline;
+        for (const auto& v : points)
+        {
+            catmullRomSpline.Add(v);
+
+            GameObject* sphere = mScene->CreateObject();
+            sphere->SetMesh(&mSphereMesh);
+            sphere->SetMaterial(&mLineShapeMaterial);
+            sphere->mTransform.SetPosition(v);
+            sphere->mTransform.SetScale(glm::vec3(0.05f, 0.05f, 0.05f));
+        }
+
+        // Cardinal spline.
+        //catmullRomSpline.SetTension(0.8f);
+
+        // thick line.
+        LineShape lineShape(points[0]);
+
+        glm::vec3 prevPos = points[0];
+        std::vector<Vertex> lines;
+        for (int i = 1; i <= 100; ++i)
+        {
+            glm::vec3 pos = catmullRomSpline.Evaluate(i / 100.0f);
+
+            lines.push_back({ prevPos, glm::vec3(1,0,0) });
+            lines.push_back({ pos, glm::vec3(1,0,0) });
+            prevPos = pos;
+
+            // thick line.
+            lineShape.AddPosition(pos);
+
+            // Sphere.
+            /*GameObject* sphere = mScene->CreateObject();
+            sphere->SetMesh(&mSphereMesh);
+            sphere->SetMaterial(&mLineShapeMaterial);
+            sphere->mTransform.SetPosition(pos);
+            sphere->mTransform.SetScale(glm::vec3(0.05f, 0.05f, 0.05f));*/
+        }
+
+        mLine.Initialize(lines);
+
+        // thick line.
+        mLineMesh.Initialize(lineShape.mVertices, lineShape.mIndices);
+
+        Camera& mainCamera = mScene->GetCamera();
+        mCameraBeginPosition = glm::vec3(8.0f, 0.0f, 30.0f);
         mainCamera.SetPosition(mCameraBeginPosition);
     }
     break;

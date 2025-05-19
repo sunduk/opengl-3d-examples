@@ -28,7 +28,8 @@ void LineShape::AddQuad(glm::vec3 end)
     glm::vec3 line3 = glm::cross(line2, line1);
     line3 = glm::normalize(line3);
 
-    float width = 0.02f;
+    //float width = 0.05f;
+    float width = 0.03f;
     glm::vec3 v0 = mBegin + line3 * width;
     glm::vec3 v1 = end + line3 * width;
     glm::vec3 v2 = mBegin - line3 * width;

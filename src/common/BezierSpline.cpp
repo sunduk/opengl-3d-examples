@@ -50,5 +50,4 @@ glm::vec3 BezierSpline::Evaluate(float t)
 
 	float curveT = splineT - curveIndex;
 	return mCurves[curveIndex]->Evaluate(curveT);
-
 }

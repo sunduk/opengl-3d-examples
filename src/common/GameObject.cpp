@@ -85,6 +85,18 @@ void GameObject::SetMaterialProperties(Shader* shader, const ShaderParam& shader
         shader->SetVec3(key, value);
     }
 
+    const std::map<std::string, std::vector<glm::vec3>>& propertiesVec3Array = mMaterial->GetPropertiesVec3Array();
+    for (const auto& element : propertiesVec3Array)
+    {
+        std::string key = element.first;
+        const std::vector<glm::vec3>& valueArray = element.second;
+
+        for (int i = 0; i < valueArray.size(); ++i)
+        {
+            shader->SetVec3(key + "[" + std::to_string(i) + "]", valueArray[i]);
+        }
+    }
+
     const std::map<std::string, float>& propertiesFloat = mMaterial->GetPropertiesFloat();
     for (const auto& element : propertiesFloat)
     {

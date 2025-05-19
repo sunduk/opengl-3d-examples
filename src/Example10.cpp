@@ -8,6 +8,7 @@
 #include "GameObject.h"
 #include "Material.h"
 #include "RenderWindow.h"
+#include "ObjLoader.h"
 #include "Scene.h"
 #include "SceneManager.h"
 
@@ -48,6 +49,10 @@ bool Example10::CreateMaterial()
     mTextureId0 = LoadTexture("../resources/opengl_texture.png");
     mDefaultMaterial.AddTexture(mTextureId0);
 
+    mPolicemanTextureId0 = LoadTexture("../resources/models/policeman/palette.png");
+    mPolicemanMaterial.AddTexture(mPolicemanTextureId0);
+    mPolicemanMaterial.SetShader(&mLambertTextureShader);
+
     return true;
 }
 
@@ -56,18 +61,19 @@ void Example10::CreateScene()
     mScene = SceneManager::GetInstance().CreateScene();
     mBoxMesh.Initialize(mScene->mBoxShape.GetVertices(), mScene->mBoxShape.GetIndices());
 
-    CreateSingleBox();
+    CreatePoliceman();
     CreatePyramid();
 }
 
-void Example10::CreateSingleBox()
+void Example10::CreatePoliceman()
 {
-    GameObject* obj = mScene->CreateObject();
-    obj->SetMesh(&mBoxMesh);
-    obj->SetMaterial(&mDefaultMaterial);
-    obj->mTransform.SetPosition(glm::vec3(0, 7.0f, 0));
-    obj->mTransform.SetScale(glm::vec3(1.5f, 1.5f, 1.5f));
-    mCenterBox = obj;
+    ObjLoader objPoliceman("../resources/models/policeman/policeman.obj");
+    mPolicemanMesh.Initialize(objPoliceman.mVertices, objPoliceman.mIndices);
+    mPoliceman = mScene->CreateObject();
+    mPoliceman->SetMesh(&mPolicemanMesh);
+    mPoliceman->SetMaterial(&mPolicemanMaterial);
+    mPoliceman->mTransform.SetPosition(glm::vec3(0.0f, 3.0f, 0.0f));
+    mPoliceman->mTransform.SetScale(glm::vec3(4.5f, 4.5f, 4.5f));
 }
 
 void Example10::CreatePyramid()
@@ -121,7 +127,7 @@ void Example10::ClearBuffer()
 
 void Example10::Render()
 {
-    mCenterBox->mTransform.RotateOnLocalAxis(glm::normalize(glm::vec3(0, 1, 0)) * 90.0f * mDeltaTime);
+    mPoliceman->mTransform.RotateOnLocalAxis(glm::normalize(glm::vec3(0, 1, 0)) * 90.0f * mDeltaTime);
 
     UpdateCameraControl();
     mScene->Update(mWindowParam.width, mWindowParam.height, mDeltaTime);

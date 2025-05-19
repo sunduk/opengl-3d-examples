@@ -38,7 +38,7 @@ private:
     bool CreateMaterial();
     void CreateScene();
 
-    void CreateSingleBox();
+    void CreatePoliceman();
     void CreatePyramid();
 
     void InitializeCamera();
@@ -61,5 +61,11 @@ private:
     Mesh mBoxMesh{};
 
     Scene* mScene{};
-    GameObject* mCenterBox{};
+
+    // policeman.
+    Mesh mPolicemanMesh{};
+    GameObject* mPoliceman{};
+
+    unsigned int mPolicemanTextureId0{};
+    Material mPolicemanMaterial{};
 };

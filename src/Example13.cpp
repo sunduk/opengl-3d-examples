@@ -71,7 +71,7 @@ bool Example13::CreateMaterial()
 
 void Example13::CreateScene()
 {
-    bool useThickLine = false;
+    bool useThickLine = true;
 
     mScene = SceneManager::GetInstance().CreateScene();
     InitializeCamera();
@@ -165,6 +165,22 @@ void Example13::CreateScene()
         positions.push_back(v2);
         positions.push_back(v3);
 
+        // points.
+        {
+            GameObject* sphere = mScene->CreateObject();
+            sphere->SetMesh(&mSphereMesh);
+            sphere->SetMaterial(&mLineShapeMaterial);
+            sphere->mTransform.SetPosition(v0);
+            sphere->mTransform.SetScale(glm::vec3(0.1f, 0.1f, 0.1f));
+        }
+        {
+            GameObject* sphere = mScene->CreateObject();
+            sphere->SetMesh(&mSphereMesh);
+            sphere->SetMaterial(&mLineShapeMaterial);
+            sphere->mTransform.SetPosition(v3);
+            sphere->mTransform.SetScale(glm::vec3(0.1f, 0.1f, 0.1f));
+        }
+
         // bezier 2.
         v0 = v3;
         v1 = v0 + (v3 - v2);
@@ -175,6 +191,22 @@ void Example13::CreateScene()
         positions.push_back(v2);
         positions.push_back(v3);
 
+        // points.
+        {
+            GameObject* sphere = mScene->CreateObject();
+            sphere->SetMesh(&mSphereMesh);
+            sphere->SetMaterial(&mLineShapeMaterial);
+            sphere->mTransform.SetPosition(v0);
+            sphere->mTransform.SetScale(glm::vec3(0.1f, 0.1f, 0.1f));
+        }
+        {
+            GameObject* sphere = mScene->CreateObject();
+            sphere->SetMesh(&mSphereMesh);
+            sphere->SetMaterial(&mLineShapeMaterial);
+            sphere->mTransform.SetPosition(v3);
+            sphere->mTransform.SetScale(glm::vec3(0.1f, 0.1f, 0.1f));
+        }
+
         // bezier 3.
         v0 = v3;
         v1 = v0 + (v3 - v2);
@@ -184,6 +216,22 @@ void Example13::CreateScene()
         positions.push_back(v1);
         positions.push_back(v2);
         positions.push_back(v3);
+
+        // points.
+        {
+            GameObject* sphere = mScene->CreateObject();
+            sphere->SetMesh(&mSphereMesh);
+            sphere->SetMaterial(&mLineShapeMaterial);
+            sphere->mTransform.SetPosition(v0);
+            sphere->mTransform.SetScale(glm::vec3(0.1f, 0.1f, 0.1f));
+        }
+        {
+            GameObject* sphere = mScene->CreateObject();
+            sphere->SetMesh(&mSphereMesh);
+            sphere->SetMaterial(&mLineShapeMaterial);
+            sphere->mTransform.SetPosition(v3);
+            sphere->mTransform.SetScale(glm::vec3(0.1f, 0.1f, 0.1f));
+        }
 
         // bezier 1 + bezier 2 + bezier 3 = bezier spline.
         BezierSpline spline;
@@ -261,7 +309,7 @@ void Example13::CreateScene()
         mLineMesh.Initialize(lineShape.mVertices, lineShape.mIndices);
 
         // debugging.
-        std::vector<Vertex> debugLineVertices;
+        /*std::vector<Vertex> debugLineVertices;
         debugLineVertices.push_back({ begin, glm::vec3(1,0,0) });
         debugLineVertices.push_back({ begin + tangentU, glm::vec3(1,0,0) });
         mDebugLine0.Initialize(debugLineVertices);
@@ -280,7 +328,7 @@ void Example13::CreateScene()
         GameObject* objDebug2 = mScene->CreateObject();
         objDebug2->SetLine(&mDebugLine1);
         objDebug2->SetMaterial(&mLineMaterial);
-        objDebug2->mTransform.SetPosition(glm::vec3(0, 0, 0));
+        objDebug2->mTransform.SetPosition(glm::vec3(0, 0, 0));*/
     }
     break;
 
@@ -294,6 +342,72 @@ void Example13::CreateScene()
         hermiteSpline.Add(glm::vec3(4, 0, 0), glm::vec3(5, -3, 0));
         hermiteSpline.Add(glm::vec3(0, -2, 2), glm::vec3(-5, 2, 0));
         hermiteSpline.Add(end, glm::vec3(0, -5, 0));
+
+        // tangent vectors.
+        {
+            GameObject* sphere = mScene->CreateObject();
+            sphere->SetMesh(&mSphereMesh);
+            sphere->SetMaterial(&mLineShapeMaterial);
+            sphere->mTransform.SetPosition(begin + glm::vec3(7, 3, 0));
+            sphere->mTransform.SetScale(glm::vec3(0.1, 0.1, 0.1));
+        }
+
+        {
+            GameObject* sphere = mScene->CreateObject();
+            sphere->SetMesh(&mSphereMesh);
+            sphere->SetMaterial(&mLineShapeMaterial);
+            sphere->mTransform.SetPosition(glm::vec3(4, 0, 0) + glm::vec3(5, -3, 0));
+            sphere->mTransform.SetScale(glm::vec3(0.1, 0.1, 0.1));
+        }
+
+        {
+            GameObject* sphere = mScene->CreateObject();
+            sphere->SetMesh(&mSphereMesh);
+            sphere->SetMaterial(&mLineShapeMaterial);
+            sphere->mTransform.SetPosition(glm::vec3(0, -2, 2) + glm::vec3(-5, 2, 0));
+            sphere->mTransform.SetScale(glm::vec3(0.1, 0.1, 0.1));
+        }
+
+        {
+            GameObject* sphere = mScene->CreateObject();
+            sphere->SetMesh(&mSphereMesh);
+            sphere->SetMaterial(&mLineShapeMaterial);
+            sphere->mTransform.SetPosition(end + glm::vec3(0, -5, 0));
+            sphere->mTransform.SetScale(glm::vec3(0.1, 0.1, 0.1));
+        }
+
+        // points.
+        {
+            GameObject* sphere = mScene->CreateObject();
+            sphere->SetMesh(&mSphereMesh);
+            sphere->SetMaterial(&mLineShapeMaterial);
+            sphere->mTransform.SetPosition(begin);
+            sphere->mTransform.SetScale(glm::vec3(0.2f, 0.2f, 0.2f));
+        }
+
+        {
+            GameObject* sphere = mScene->CreateObject();
+            sphere->SetMesh(&mSphereMesh);
+            sphere->SetMaterial(&mLineShapeMaterial);
+            sphere->mTransform.SetPosition(glm::vec3(4, 0, 0));
+            sphere->mTransform.SetScale(glm::vec3(0.2f, 0.2f, 0.2f));
+        }
+
+        {
+            GameObject* sphere = mScene->CreateObject();
+            sphere->SetMesh(&mSphereMesh);
+            sphere->SetMaterial(&mLineShapeMaterial);
+            sphere->mTransform.SetPosition(glm::vec3(0, -2, 2));
+            sphere->mTransform.SetScale(glm::vec3(0.2f, 0.2f, 0.2f));
+        }
+
+        {
+            GameObject* sphere = mScene->CreateObject();
+            sphere->SetMesh(&mSphereMesh);
+            sphere->SetMaterial(&mLineShapeMaterial);
+            sphere->mTransform.SetPosition(end);
+            sphere->mTransform.SetScale(glm::vec3(0.2f, 0.2f, 0.2f));
+        }
 
         // thick line.
         LineShape lineShape(begin);
@@ -314,7 +428,7 @@ void Example13::CreateScene()
             // Sphere.
             /*GameObject* sphere = mScene->CreateObject();
             sphere->SetMesh(&mSphereMesh);
-            sphere->SetMaterial(&mDefaultMaterial);
+            sphere->SetMaterial(&mLineShapeMaterial);
             sphere->mTransform.SetPosition(pos);
             sphere->mTransform.SetScale(glm::vec3(0.05f, 0.05f, 0.05f));*/
         }
@@ -349,11 +463,11 @@ void Example13::CreateScene()
             sphere->SetMesh(&mSphereMesh);
             sphere->SetMaterial(&mLineShapeMaterial);
             sphere->mTransform.SetPosition(v);
-            sphere->mTransform.SetScale(glm::vec3(0.05f, 0.05f, 0.05f));
+            sphere->mTransform.SetScale(glm::vec3(0.5f, 0.5f, 0.5f));
         }
 
         // Cardinal spline.
-        //catmullRomSpline.SetTension(0.8f);
+        catmullRomSpline.SetTension(1.0f);
 
         // thick line.
         LineShape lineShape(points[0]);

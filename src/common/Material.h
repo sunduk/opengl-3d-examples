@@ -24,6 +24,9 @@ public:
     void SetPropertyVec3(const std::string& name, glm::vec3 value);
     const std::map<std::string, glm::vec3>& GetPropertiesVec3() const;
 
+    void AddPropertyVec3Array(const std::string& name, glm::vec3 value);
+    const std::map<std::string, std::vector<glm::vec3>>& GetPropertiesVec3Array() const;
+
     void SetPropertyFloat(const std::string& name, float value);
     const std::map<std::string, float>& GetPropertiesFloat() const;
 
@@ -37,4 +40,5 @@ private:
     std::map<std::string, unsigned int> mPropertiesUInt{};
     std::map<std::string, float> mPropertiesFloat{};
     std::vector<unsigned int> mTextureIDs{};
+    std::map<std::string, std::vector<glm::vec3>> mPropertiesVec3Array{};
 };

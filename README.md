@@ -2,7 +2,7 @@
 
 ["기초부터 배운다! 3D 게임 프로그래밍" 위키독스 전자책](https://wikidocs.net/book/18000)
 
-- ![](https://wikidocs.net/images//book/%EC%B1%85%ED%91%9C%EC%A7%80_dTzNIgx_xSAeYIf_RUCtpIE_ltiJYhc_bul7PTp_oPZ4IHz_O2jv5v5_OZoGCJ6_ngTDF5c_vJ6maWF.png)
+- ![https://wikidocs.net/book/18000](https://wikidocs.net/images//book/%EC%B1%85%ED%91%9C%EC%A7%80_dTzNIgx_xSAeYIf_RUCtpIE_ltiJYhc_bul7PTp_oPZ4IHz_O2jv5v5_OZoGCJ6_ngTDF5c_vJ6maWF.png)
 
 ---
 

@@ -2,8 +2,7 @@
 
 ["기초부터 배운다! 3D 게임 프로그래밍" 위키독스 전자책](https://wikidocs.net/book/18000)
 
-[<img src="https://private-user-images.githubusercontent.com/438767/464451269-1678cdb8-192d-4dcb-b9ff-5ed585b6ebac.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTIxMTA4MjYsIm5iZiI6MTc1MjExMDUyNiwicGF0aCI6Ii80Mzg3NjcvNDY0NDUxMjY5LTE2NzhjZGI4LTE5MmQtNGRjYi1iOWZmLTVlZDU4NWI2ZWJhYy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNzEwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDcxMFQwMTIyMDZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wM2ViZDFiN2E2NTIzYWU2YWI0MWYzNGEwNDFlMjIyYjk4Mjk4OThjODRlZTEyZDQxOTE0ZTc2MTYxZDRlNWVhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.rU8sbCFCxoZqXbw54AYD5qURuzsu1AJ0pbkGd6Xm9-Q" width=300 />](https://wikidocs.net/book/18000)
-
+- ![](https://wikidocs.net/images//book/%EC%B1%85%ED%91%9C%EC%A7%80_dTzNIgx_xSAeYIf_RUCtpIE_ltiJYhc_bul7PTp_oPZ4IHz_O2jv5v5_OZoGCJ6_ngTDF5c_vJ6maWF.png)
 
 ---
 

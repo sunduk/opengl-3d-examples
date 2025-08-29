@@ -1,6 +1,6 @@
 # opengl-3d-examples
 
-<img width="1200" height="675" alt="대표이미지1200x675" src="https://github.com/user-attachments/assets/5a2dbd94-e65c-4bfd-afa2-ce7ce721dad9" />
+[<img width="1200" height="675" alt="대표이미지1200x675" src="https://github.com/user-attachments/assets/5a2dbd94-e65c-4bfd-afa2-ce7ce721dad9" />](https://app.wadiz.kr/links/xY7b87F7Ug)
 
 https://app.wadiz.kr/links/xY7b87F7Ug
 

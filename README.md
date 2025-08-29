@@ -1,9 +1,10 @@
 # opengl-3d-examples
 
-["기초부터 배운다! 3D 게임 프로그래밍" 위키독스 전자책](https://wikidocs.net/book/18000)
+<img width="1200" height="675" alt="대표이미지1200x675" src="https://github.com/user-attachments/assets/5a2dbd94-e65c-4bfd-afa2-ce7ce721dad9" />
 
-- [![책 표지](https://wikidocs.net/images//book/%EC%B1%85%ED%91%9C%EC%A7%80_dTzNIgx_xSAeYIf_RUCtpIE_ltiJYhc_bul7PTp_oPZ4IHz_O2jv5v5_OZoGCJ6_ngTDF5c_vJ6maWF.png)](https://wikidocs.net/book/18000)
-- 이 책과 소스코드를 함께 보시면 학습하기에 더 좋습니다.
+https://app.wadiz.kr/links/xY7b87F7Ug
+
+와디즈 펀딩 진행중입니다!
 
 ---
 

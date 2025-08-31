@@ -24,7 +24,10 @@ Learn 3D rendering by OpenGL
 ## Build(VisualStudio)
 
 > 빌드파일을 생성하려면 **[CMake](https://cmake.org/)** 가 설치되어 있어야 합니다.
+> 
 > 아래 순서대로 진행해 주세요.
+> 
+> 소스코드 경로에 **한글폴더**가 섞여 있으면 안됩니다. 반드시 **영문 폴더**에 소스코드를 다운로드 해 주세요.
 
 ### 1. 소스코드 다운로드
 <img width="1408" height="915" alt="image01_02" src="https://github.com/user-attachments/assets/3992b0b4-d41b-411e-8a3a-5723ae14373c" />

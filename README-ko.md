@@ -24,8 +24,23 @@ Learn 3D rendering by OpenGL
 ## Build(VisualStudio)
 
 > 빌드파일을 생성하려면 **[CMake](https://cmake.org/)** 가 설치되어 있어야 합니다.
+> 아래 순서대로 진행해 주세요.
 
-### External libraries빌드
+### 1. 소스코드 다운로드
+<img width="1408" height="915" alt="image01_02" src="https://github.com/user-attachments/assets/3992b0b4-d41b-411e-8a3a-5723ae14373c" />
+
+---
+
+### 2. CMake 설치
+https://cmake.org/download/ 접속 후 Windows x64 Installer 항목을 설치해 주세요.
+
+예시)
+
+<img width="785" height="189" alt="image" src="https://github.com/user-attachments/assets/d401c89c-9773-4e1d-8aad-feb2150842ae" />
+
+---
+
+### 3. External libraries빌드
 
 #### glew-2.1.0 빌드(최초 한번만 수행)
 

@@ -1,6 +1,4 @@
-# opengl-3d-examples
-
-<img width="1152" height="827" alt="cover_front" src="https://github.com/user-attachments/assets/a89249e4-bdca-4e2a-ad2c-a997c3ba4fe6" />
+# 기초부터 배운다! 3D 게임 프로그래밍
 
 ---
 

@@ -1,10 +1,6 @@
 # opengl-3d-examples
 
-[<img width="1200" height="675" alt="대표이미지1200x675" src="https://github.com/user-attachments/assets/5a2dbd94-e65c-4bfd-afa2-ce7ce721dad9" />](https://app.wadiz.kr/links/xY7b87F7Ug)
-
-https://app.wadiz.kr/links/xY7b87F7Ug
-
-와디즈 펀딩 진행중입니다!
+<img width="1152" height="827" alt="cover_front" src="https://github.com/user-attachments/assets/a89249e4-bdca-4e2a-ad2c-a997c3ba4fe6" />
 
 ---
 

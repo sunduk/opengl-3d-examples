@@ -35,6 +35,10 @@ HalfLambert shading
 
 Flat shading
 
+<img width="802" height="832" alt="halflambert_sphere" src="https://github.com/user-attachments/assets/4b5f1bef-ea8c-4fee-9fc9-d677d7e03d26" />
+
+HalfLambert shading sphere
+
 <img width="802" height="832" alt="flat_sphere" src="https://github.com/user-attachments/assets/c4e3e1be-7c32-48a0-b261-0cfeac8e33d9" />
 
 Flat shading sphere

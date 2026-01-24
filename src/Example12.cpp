@@ -74,7 +74,7 @@ bool Example12::CreateMaterial()
         }
         else
         {
-            mPaletteTextureId0 = LoadTexture("../resources/models/policeman/palette.png");
+            mPaletteTextureId0 = LoadTexture("../resources/models/cutebaby/cutebaby.png");
         }
 
         mDefaultMaterial.AddTexture(mPaletteTextureId0);
@@ -99,7 +99,7 @@ bool Example12::CreateMaterial()
                 return false;
             }
 
-            mPaletteTextureId0 = LoadTexture("../resources/models/policeman/palette.png");
+            mPaletteTextureId0 = LoadTexture("../resources/models/cutebaby/cutebaby.png");
             mDefaultMaterial.AddTexture(mPaletteTextureId0);
         }
 
@@ -126,7 +126,7 @@ bool Example12::CreateMaterial()
                 return false;
             }
 
-            mPaletteTextureId0 = LoadTexture("../resources/models/policeman/palette.png");
+            mPaletteTextureId0 = LoadTexture("../resources/models/cutebaby/cutebaby.png");
             mDefaultMaterial.AddTexture(mPaletteTextureId0);
 
             mDefaultMaterial.SetPropertyVec3("customColor", glm::vec3(1, 1, 1));
@@ -154,7 +154,7 @@ bool Example12::CreateMaterial()
                 return false;
             }
 
-            mPaletteTextureId0 = LoadTexture("../resources/models/policeman/palette.png");
+            mPaletteTextureId0 = LoadTexture("../resources/models/cutebaby/cutebaby.png");
             mDefaultMaterial.AddTexture(mPaletteTextureId0);
             mDefaultMaterial.SetPropertyVec3("customColor", glm::vec3(1, 1, 1));
         }
@@ -181,7 +181,7 @@ bool Example12::CreateMaterial()
                 return false;
             }
 
-            mPaletteTextureId0 = LoadTexture("../resources/models/policeman/palette.png");
+            mPaletteTextureId0 = LoadTexture("../resources/models/cutebaby/cutebaby.png");
             mDefaultMaterial.AddTexture(mPaletteTextureId0);
             mDefaultMaterial.SetPropertyVec3("customColor", glm::vec3(1, 1, 1));
         }
@@ -219,7 +219,7 @@ bool Example12::CreateMaterial()
                 return false;
             }
 
-            mPaletteTextureId0 = LoadTexture("../resources/models/policeman/palette.png");
+            mPaletteTextureId0 = LoadTexture("../resources/models/cutebaby/cutebaby.png");
             mDefaultMaterial.AddTexture(mPaletteTextureId0);
 
             mDefaultMaterial.SetPropertyFloat("thickness", 0.05f);
@@ -243,7 +243,7 @@ void Example12::CreateScene()
     }
     else
     {
-        ObjLoader objSphere("../resources/models/policeman/policeman.obj");
+        ObjLoader objSphere("../resources/models/cutebaby/cutebaby.obj");
         mSphereMesh.Initialize(objSphere.mVertices, objSphere.mIndices);
     }
 

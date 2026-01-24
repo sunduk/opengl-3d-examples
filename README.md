@@ -29,6 +29,16 @@ Learn 3D rendering by OpenGL
 
 <img width="536" height="526" alt="image" src="https://github.com/user-attachments/assets/8e67a5e6-7565-442b-9af1-8f0d6a587415" />
 
+HalfLambert shading
+
+<img width="802" height="832" alt="flat_baby" src="https://github.com/user-attachments/assets/5bb1f501-3f8f-4d6a-af41-55083165499c" />
+
+Flat shading
+
+<img width="802" height="832" alt="flat_sphere" src="https://github.com/user-attachments/assets/c4e3e1be-7c32-48a0-b261-0cfeac8e33d9" />
+
+Flat shading sphere
+
 ![](https://github.com/sunduk/opengl-3d-examples/blob/main/doc/pyramid.png)
 
 ![](https://github.com/sunduk/opengl-3d-examples/blob/main/doc/objloading.png)

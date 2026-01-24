@@ -60,6 +60,7 @@ void PrintMenu()
 	std::cout << "34. Hermite Curve" << std::endl;
 	std::cout << "35. Hermite Spline" << std::endl;
 	std::cout << "36. CatmullRom Spline(+Cardinal Spline)" << std::endl;
+	std::cout << "37. Shader - Flat Shading" << std::endl;
 	std::cout << "Q. Quit" << std::endl;
 	std::cout << "==========================" << std::endl;
 }
@@ -162,6 +163,8 @@ int main()
 		RunExample<Example13, Example13::CurveType::HermiteCurve>,
 		RunExample<Example13, Example13::CurveType::HermiteSpline>,
 		RunExample<Example13, Example13::CurveType::CatmullRomSpline>,
+
+		RunExample<Example12, Example12::BasicShaderType::Flat>,
 	};
 
 	bool isRunning = true;

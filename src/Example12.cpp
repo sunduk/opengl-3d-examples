@@ -227,6 +227,34 @@ bool Example12::CreateMaterial()
 
         mDefaultMaterial.SetShader(&mDefaultShader);
         break;
+
+    case BasicShaderType::Flat:
+        if (mUseSphere)
+        {
+            ret = mDefaultShader.Load("../resources/shaders/FlatShading.vs", "../resources/shaders/FlatShading.fs");
+            if (!ret)
+            {
+                return false;
+            }
+
+            mDefaultMaterial.SetPropertyVec3("customColor", glm::vec3(0, 1, 0));
+        }
+        else
+        {
+            ret = mDefaultShader.Load("../resources/shaders/FlatShadingTexture.vs", "../resources/shaders/FlatShadingTexture.fs");
+            if (!ret)
+            {
+                return false;
+            }
+
+            mPaletteTextureId0 = LoadTexture("../resources/models/cutebaby/cutebaby.png");
+            mDefaultMaterial.AddTexture(mPaletteTextureId0);
+
+            mDefaultMaterial.SetPropertyVec3("customColor", glm::vec3(1, 1, 1));
+        }
+
+        mDefaultMaterial.SetShader(&mDefaultShader);
+        break;
     }
 
     return true;

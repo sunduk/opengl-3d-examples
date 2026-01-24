@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0DFB2125-8600-30E7-B80B-CF7ADD1AFFE9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ExampleMain</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\LSH\work\book\opengl-3d-examples\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ExampleMain.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ExampleMain</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\LSH\work\book\opengl-3d-examples\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ExampleMain.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ExampleMain</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\LSH\work\book\opengl-3d-examples\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">ExampleMain.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">ExampleMain</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\LSH\work\book\opengl-3d-examples\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">ExampleMain.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">ExampleMain</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\LSH\work\book\opengl-3d-examples\externals;C:\LSH\work\book\opengl-3d-examples\externals\glad\include;C:\LSH\work\book\opengl-3d-examples\externals\glew-2.1.0\include;C:\LSH\work\book\opengl-3d-examples\externals\glfw\include;C:\LSH\work\book\opengl-3d-examples\externals\glm;C:\LSH\work\book\opengl-3d-examples\src\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\LSH\work\book\opengl-3d-examples\externals;C:\LSH\work\book\opengl-3d-examples\externals\glad\include;C:\LSH\work\book\opengl-3d-examples\externals\glew-2.1.0\include;C:\LSH\work\book\opengl-3d-examples\externals\glfw\include;C:\LSH\work\book\opengl-3d-examples\externals\glm;C:\LSH\work\book\opengl-3d-examples\src\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\LSH\work\book\opengl-3d-examples\externals;C:\LSH\work\book\opengl-3d-examples\externals\glad\include;C:\LSH\work\book\opengl-3d-examples\externals\glew-2.1.0\include;C:\LSH\work\book\opengl-3d-examples\externals\glfw\include;C:\LSH\work\book\opengl-3d-examples\externals\glm;C:\LSH\work\book\opengl-3d-examples\src\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>externals\glfw\generated\src\debug\glfw3.lib;externals\glew-2.1.0\generated\lib\debug\libglew32d.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/LSH/work/book/opengl-3d-examples/Debug/ExampleMain.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/LSH/work/book/opengl-3d-examples/Debug/ExampleMain.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\LSH\work\book\opengl-3d-examples\externals;C:\LSH\work\book\opengl-3d-examples\externals\glad\include;C:\LSH\work\book\opengl-3d-examples\externals\glew-2.1.0\include;C:\LSH\work\book\opengl-3d-examples\externals\glfw\include;C:\LSH\work\book\opengl-3d-examples\externals\glm;C:\LSH\work\book\opengl-3d-examples\src\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\LSH\work\book\opengl-3d-examples\externals;C:\LSH\work\book\opengl-3d-examples\externals\glad\include;C:\LSH\work\book\opengl-3d-examples\externals\glew-2.1.0\include;C:\LSH\work\book\opengl-3d-examples\externals\glfw\include;C:\LSH\work\book\opengl-3d-examples\externals\glm;C:\LSH\work\book\opengl-3d-examples\src\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\LSH\work\book\opengl-3d-examples\externals;C:\LSH\work\book\opengl-3d-examples\externals\glad\include;C:\LSH\work\book\opengl-3d-examples\externals\glew-2.1.0\include;C:\LSH\work\book\opengl-3d-examples\externals\glfw\include;C:\LSH\work\book\opengl-3d-examples\externals\glm;C:\LSH\work\book\opengl-3d-examples\src\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>externals\glfw\generated\src\release\glfw3.lib;externals\glew-2.1.0\generated\lib\release\libglew32.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/LSH/work/book/opengl-3d-examples/Release/ExampleMain.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/LSH/work/book/opengl-3d-examples/Release/ExampleMain.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\LSH\work\book\opengl-3d-examples\externals;C:\LSH\work\book\opengl-3d-examples\externals\glad\include;C:\LSH\work\book\opengl-3d-examples\externals\glew-2.1.0\include;C:\LSH\work\book\opengl-3d-examples\externals\glfw\include;C:\LSH\work\book\opengl-3d-examples\externals\glm;C:\LSH\work\book\opengl-3d-examples\src\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\LSH\work\book\opengl-3d-examples\externals;C:\LSH\work\book\opengl-3d-examples\externals\glad\include;C:\LSH\work\book\opengl-3d-examples\externals\glew-2.1.0\include;C:\LSH\work\book\opengl-3d-examples\externals\glfw\include;C:\LSH\work\book\opengl-3d-examples\externals\glm;C:\LSH\work\book\opengl-3d-examples\src\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\LSH\work\book\opengl-3d-examples\externals;C:\LSH\work\book\opengl-3d-examples\externals\glad\include;C:\LSH\work\book\opengl-3d-examples\externals\glew-2.1.0\include;C:\LSH\work\book\opengl-3d-examples\externals\glfw\include;C:\LSH\work\book\opengl-3d-examples\externals\glm;C:\LSH\work\book\opengl-3d-examples\src\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>externals\glfw\generated\src\release\glfw3.lib;externals\glew-2.1.0\generated\lib\release\libglew32.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/LSH/work/book/opengl-3d-examples/MinSizeRel/ExampleMain.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/LSH/work/book/opengl-3d-examples/MinSizeRel/ExampleMain.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\LSH\work\book\opengl-3d-examples\externals;C:\LSH\work\book\opengl-3d-examples\externals\glad\include;C:\LSH\work\book\opengl-3d-examples\externals\glew-2.1.0\include;C:\LSH\work\book\opengl-3d-examples\externals\glfw\include;C:\LSH\work\book\opengl-3d-examples\externals\glm;C:\LSH\work\book\opengl-3d-examples\src\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\LSH\work\book\opengl-3d-examples\externals;C:\LSH\work\book\opengl-3d-examples\externals\glad\include;C:\LSH\work\book\opengl-3d-examples\externals\glew-2.1.0\include;C:\LSH\work\book\opengl-3d-examples\externals\glfw\include;C:\LSH\work\book\opengl-3d-examples\externals\glm;C:\LSH\work\book\opengl-3d-examples\src\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\LSH\work\book\opengl-3d-examples\externals;C:\LSH\work\book\opengl-3d-examples\externals\glad\include;C:\LSH\work\book\opengl-3d-examples\externals\glew-2.1.0\include;C:\LSH\work\book\opengl-3d-examples\externals\glfw\include;C:\LSH\work\book\opengl-3d-examples\externals\glm;C:\LSH\work\book\opengl-3d-examples\src\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>externals\glfw\generated\src\release\glfw3.lib;externals\glew-2.1.0\generated\lib\release\libglew32.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/LSH/work/book/opengl-3d-examples/RelWithDebInfo/ExampleMain.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/LSH/work/book/opengl-3d-examples/RelWithDebInfo/ExampleMain.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\LSH\work\book\opengl-3d-examples\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/LSH/work/book/opengl-3d-examples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/LSH/work/book/opengl-3d-examples -BC:/LSH/work/book/opengl-3d-examples --check-stamp-file C:/LSH/work/book/opengl-3d-examples/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\LSH\work\book\opengl-3d-examples\CMakeFiles\4.1.0\CMakeCCompiler.cmake;C:\LSH\work\book\opengl-3d-examples\CMakeFiles\4.1.0\CMakeCXXCompiler.cmake;C:\LSH\work\book\opengl-3d-examples\CMakeFiles\4.1.0\CMakeRCCompiler.cmake;C:\LSH\work\book\opengl-3d-examples\CMakeFiles\4.1.0\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\LSH\work\book\opengl-3d-examples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/LSH/work/book/opengl-3d-examples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/LSH/work/book/opengl-3d-examples -BC:/LSH/work/book/opengl-3d-examples --check-stamp-file C:/LSH/work/book/opengl-3d-examples/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\LSH\work\book\opengl-3d-examples\CMakeFiles\4.1.0\CMakeCCompiler.cmake;C:\LSH\work\book\opengl-3d-examples\CMakeFiles\4.1.0\CMakeCXXCompiler.cmake;C:\LSH\work\book\opengl-3d-examples\CMakeFiles\4.1.0\CMakeRCCompiler.cmake;C:\LSH\work\book\opengl-3d-examples\CMakeFiles\4.1.0\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\LSH\work\book\opengl-3d-examples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/LSH/work/book/opengl-3d-examples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/LSH/work/book/opengl-3d-examples -BC:/LSH/work/book/opengl-3d-examples --check-stamp-file C:/LSH/work/book/opengl-3d-examples/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\LSH\work\book\opengl-3d-examples\CMakeFiles\4.1.0\CMakeCCompiler.cmake;C:\LSH\work\book\opengl-3d-examples\CMakeFiles\4.1.0\CMakeCXXCompiler.cmake;C:\LSH\work\book\opengl-3d-examples\CMakeFiles\4.1.0\CMakeRCCompiler.cmake;C:\LSH\work\book\opengl-3d-examples\CMakeFiles\4.1.0\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\LSH\work\book\opengl-3d-examples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/LSH/work/book/opengl-3d-examples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/LSH/work/book/opengl-3d-examples -BC:/LSH/work/book/opengl-3d-examples --check-stamp-file C:/LSH/work/book/opengl-3d-examples/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\LSH\work\book\opengl-3d-examples\CMakeFiles\4.1.0\CMakeCCompiler.cmake;C:\LSH\work\book\opengl-3d-examples\CMakeFiles\4.1.0\CMakeCXXCompiler.cmake;C:\LSH\work\book\opengl-3d-examples\CMakeFiles\4.1.0\CMakeRCCompiler.cmake;C:\LSH\work\book\opengl-3d-examples\CMakeFiles\4.1.0\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\LSH\work\book\opengl-3d-examples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\externals\glad\include\KHR\khrplatform.h" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\externals\glad\include\glad\glad.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\externals\glad\src\glad.c" />
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Color.fs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Color.vs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\ColorTexture.fs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\ColorTexture.vs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\FlatShading.fs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\FlatShading.vs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\FlatShadingTexture.fs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\FlatShadingTexture.vs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\HalfLambert.fs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\HalfLambert.vs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\HalfLambertTexture.fs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\HalfLambertTexture.vs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Lambert.fs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Lambert.vs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\LambertTexture.fs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\LambertTexture.vs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\MVP.vs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Outline.fs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Outline.vs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\OutlineTexture.vs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Rim.fs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Rim.vs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\RimTexture.fs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\RimTexture.vs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Texture.fs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Texture.vs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Thickness.fs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Thickness.vs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\ThicknessHalfLambert.vs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\VertexColor.fs">
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\VertexColor.vs">
+    </None>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Examples_Main.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Examples_Main.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\Bezier.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\Bezier.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\BezierSpline.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\BezierSpline.h" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\BoxShape.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\Camera.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\Camera.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\CatmullRomSpline.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\CatmullRomSpline.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\DirectionalLight.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\DirectionalLight.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\GameObject.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\GameObject.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\Hermite.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\Hermite.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\HermiteSpline.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\HermiteSpline.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\Line.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\Line.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\LineShape.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\LineShape.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\Material.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\Material.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\Mesh.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\Mesh.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\ObjLoader.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\ObjLoader.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\RenderWindow.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\RenderWindow.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\Scene.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\Scene.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\SceneManager.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\SceneManager.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\Shader.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\Shader.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\SimpleMesh.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\SimpleMesh.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\SimpleTransform.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\SimpleTransform.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\Transform.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\Transform.h" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\Vertex.h" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\WindowParam.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example00.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example00.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example01.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example01.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example02.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example02.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example03.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example03.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example04.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example04.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example05.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example05.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example06.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example06.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example07.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example07.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example08.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example08.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example09.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example09.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example10.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example10.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example11.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example11.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example12.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example12.h" />
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example13.cpp" />
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example13.h" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\LSH\work\book\opengl-3d-examples\ZERO_CHECK.vcxproj">
+      <Project>{5C35054C-89CD-322F-A718-6440E9834F66}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

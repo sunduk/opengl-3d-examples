@@ -36,7 +36,8 @@ public:
         HalfLambert,
         Rim,
         Outline,
-        Thickness
+        Thickness,
+        Flat,
     };
 
 public:

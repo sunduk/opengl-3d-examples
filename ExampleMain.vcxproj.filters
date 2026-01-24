@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\externals\glad\src\glad.c">
+      <Filter>Externals\glad</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Examples_Main.cpp">
+      <Filter>Examples_Main</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\Bezier.cpp">
+      <Filter>ExamplesCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\BezierSpline.cpp">
+      <Filter>ExamplesCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\Camera.cpp">
+      <Filter>ExamplesCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\CatmullRomSpline.cpp">
+      <Filter>ExamplesCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\DirectionalLight.cpp">
+      <Filter>ExamplesCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\GameObject.cpp">
+      <Filter>ExamplesCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\Hermite.cpp">
+      <Filter>ExamplesCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\HermiteSpline.cpp">
+      <Filter>ExamplesCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\Line.cpp">
+      <Filter>ExamplesCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\LineShape.cpp">
+      <Filter>ExamplesCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\Material.cpp">
+      <Filter>ExamplesCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\Mesh.cpp">
+      <Filter>ExamplesCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\ObjLoader.cpp">
+      <Filter>ExamplesCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\RenderWindow.cpp">
+      <Filter>ExamplesCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\Scene.cpp">
+      <Filter>ExamplesCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\SceneManager.cpp">
+      <Filter>ExamplesCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\Shader.cpp">
+      <Filter>ExamplesCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\SimpleMesh.cpp">
+      <Filter>ExamplesCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\SimpleTransform.cpp">
+      <Filter>ExamplesCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\common\Transform.cpp">
+      <Filter>ExamplesCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example00.cpp">
+      <Filter>Example00_Test</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example01.cpp">
+      <Filter>Example01_Window</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example02.cpp">
+      <Filter>Example02_Triangle</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example03.cpp">
+      <Filter>Example03_Color</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example04.cpp">
+      <Filter>Example04_Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example05.cpp">
+      <Filter>Example05_TextureMixing</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example06.cpp">
+      <Filter>Example06_Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example07.cpp">
+      <Filter>Example07_Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example08.cpp">
+      <Filter>Example08_Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example09.cpp">
+      <Filter>Example09_MVP</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example10.cpp">
+      <Filter>Example10_Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example11.cpp">
+      <Filter>Example11_ObjLoading</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example12.cpp">
+      <Filter>Example12_Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\LSH\work\book\opengl-3d-examples\src\Example13.cpp">
+      <Filter>Example13_Curve</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\externals\glad\include\KHR\khrplatform.h">
+      <Filter>Externals\glad</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\externals\glad\include\glad\glad.h">
+      <Filter>Externals\glad</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Examples_Main.h">
+      <Filter>Examples_Main</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\Bezier.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\BezierSpline.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\BoxShape.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\Camera.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\CatmullRomSpline.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\DirectionalLight.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\GameObject.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\Hermite.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\HermiteSpline.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\Line.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\LineShape.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\Material.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\Mesh.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\ObjLoader.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\RenderWindow.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\Scene.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\SceneManager.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\Shader.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\SimpleMesh.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\SimpleTransform.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\Transform.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\Vertex.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\common\WindowParam.h">
+      <Filter>ExamplesCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example00.h">
+      <Filter>Example00_Test</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example01.h">
+      <Filter>Example01_Window</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example02.h">
+      <Filter>Example02_Triangle</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example03.h">
+      <Filter>Example03_Color</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example04.h">
+      <Filter>Example04_Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example05.h">
+      <Filter>Example05_TextureMixing</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example06.h">
+      <Filter>Example06_Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example07.h">
+      <Filter>Example07_Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example08.h">
+      <Filter>Example08_Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example09.h">
+      <Filter>Example09_MVP</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example10.h">
+      <Filter>Example10_Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example11.h">
+      <Filter>Example11_ObjLoading</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example12.h">
+      <Filter>Example12_Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\LSH\work\book\opengl-3d-examples\src\Example13.h">
+      <Filter>Example13_Curve</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\LSH\work\book\opengl-3d-examples\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Color.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Color.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\ColorTexture.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\ColorTexture.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\FlatShading.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\FlatShading.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\FlatShadingTexture.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\FlatShadingTexture.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\HalfLambert.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\HalfLambert.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\HalfLambertTexture.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\HalfLambertTexture.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Lambert.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Lambert.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\LambertTexture.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\LambertTexture.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\MVP.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Outline.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Outline.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\OutlineTexture.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Rim.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Rim.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\RimTexture.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\RimTexture.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Texture.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Texture.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Thickness.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\Thickness.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\ThicknessHalfLambert.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\VertexColor.fs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="C:\LSH\work\book\opengl-3d-examples\resources\shaders\VertexColor.vs">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Example00_Test">
+      <UniqueIdentifier>{61FEA1A7-4EEE-3983-8557-BECF8A299E48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Example01_Window">
+      <UniqueIdentifier>{B6B13E07-85D3-3690-BF71-EE6F5F6FAEFF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Example02_Triangle">
+      <UniqueIdentifier>{91385942-A358-3C26-8708-8A2E188FEDD6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Example03_Color">
+      <UniqueIdentifier>{C4D885FB-297A-3756-99AE-C3968165A7C9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Example04_Texture">
+      <UniqueIdentifier>{441AD790-6F28-389E-B60F-7A36DD9A17FB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Example05_TextureMixing">
+      <UniqueIdentifier>{28FC2B58-9D58-3678-B7DA-47C2F4849FC7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Example06_Mesh">
+      <UniqueIdentifier>{08968E55-EA39-3E00-9D58-395CAD2A70FB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Example07_Shader">
+      <UniqueIdentifier>{3D2BF482-81C7-3178-BE8D-4A5CE5109F77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Example08_Transform">
+      <UniqueIdentifier>{0A8FD9EB-CF4A-339B-8270-001A081F4F14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Example09_MVP">
+      <UniqueIdentifier>{981FB297-CB14-3931-A4E8-A9C63CE53F2A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Example10_Scene">
+      <UniqueIdentifier>{5BB414FC-82B2-30FB-A919-DF7917AD8511}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Example11_ObjLoading">
+      <UniqueIdentifier>{93E71288-5EB7-36DB-8709-46624F585090}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Example12_Shader">
+      <UniqueIdentifier>{C5EF2A71-70E9-3790-928C-616377F86315}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Example13_Curve">
+      <UniqueIdentifier>{A35BA6C0-4751-30D1-A150-A1C81B54DE22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ExamplesCommon">
+      <UniqueIdentifier>{82B27263-DE16-33F1-B965-D6B760266135}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Examples_Main">
+      <UniqueIdentifier>{27886011-B88A-3B34-AE04-B5CD7FC5060F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Externals">
+      <UniqueIdentifier>{A4D982AC-FE44-3BF1-8BA6-E69DEF693567}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Externals\glad">
+      <UniqueIdentifier>{A5638D84-E156-392F-AFC6-441BDF5753CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{7A1C8729-CED6-3CCF-A245-B1BFA07AAD42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Shaders">
+      <UniqueIdentifier>{8D6E7F40-B9C5-35FE-93C5-57D7A5506912}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

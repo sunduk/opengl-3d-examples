@@ -27,6 +27,8 @@ Learn 3D rendering by OpenGL
 
 ![](https://github.com/sunduk/opengl-3d-examples/blob/main/doc/box.png)
 
+<img width="536" height="526" alt="image" src="https://github.com/user-attachments/assets/8e67a5e6-7565-442b-9af1-8f0d6a587415" />
+
 ![](https://github.com/sunduk/opengl-3d-examples/blob/main/doc/pyramid.png)
 
 ![](https://github.com/sunduk/opengl-3d-examples/blob/main/doc/objloading.png)
